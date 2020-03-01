@@ -1,0 +1,97 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 5
+   Case Problem 2
+
+   CCC Calendar Table style sheet
+   Author: Jerad Rodgers
+   Date:   11/1/2018
+
+   Filename:         calendar.css
+   Supporting Files: bottom.jpg, bottomleft.jpg, bottomright.jpg,
+                     left.jpg, right.jpg, top.jpg,
+                     tab.jpg, topleft.jpg, topright.jpg, redtab.jpg
+
+                     
+                     <!-- Rubric Item #6 Error Free CSS -->
+*/
+
+/* Border */
+
+table.calendar {
+      border: 5px;
+      border-collapse: separate;
+      border-spacing: 5px;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8px;
+      width: 650px;
+      /* style that specifies multiple background imagages for the calendar */
+      background: url(topleft.jpg) top left no-repeat,
+                  url(topright.jpg) top right no-repeat,
+                  url(bottomleft.jpg) bottom left no-repeat,
+                  url(bottomright.jpg) bottom right no-repeat,
+                  url(top.jpg) top left repeat-x,
+                  url(left.jpg) top left repeat-y,
+                  url(right.jpg) top right repeat-y,
+                  url(bottom.jpg) bottom left repeat-x;
+}
+
+/* center table caption and adjust font characteristics */
+
+table caption {
+   text-align: center;
+   padding-bottom: 10px;
+   font-size: 16px;
+   letter-spacing: 3px;
+   width: 650px;
+}
+
+/* set the widt of the columns and background color */
+
+table.calendar col.weekends {
+   width: 14%;
+   background-color: rgb(255, 232, 232);
+
+}
+table.calendar col.weekdays {
+   width: 14%
+}
+
+/* adjut the table header characteristics */
+
+table.calendar thead {
+   background-color: red;
+   color: white;
+   letter-spacing: 5px;
+}
+
+table.calendar tbody td {
+   font-size: 8px;
+}
+
+/* adjust the height of the table row */ 
+
+table.calendar thead tr {
+   height: 5%;
+}
+
+/* add solid gray border to table table data cells */ 
+
+table.calendar th, table.calendar td {
+   border: 1px solid gray;
+}
+
+table.calendar tbody td {
+   vertical-align: top;
+}
+
+section#summary div {
+   column-count: 2;
+   column-gap: 20px;
+   column-rule: 1px solid rgb(0, 0, 0);
+}

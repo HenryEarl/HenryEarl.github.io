@@ -1,0 +1,90 @@
+/*
+	Elements Styles
+	Author: Jerad Rodgers
+	Date: 10/28/2018
+	Filename: elements_styles.css
+	supporting files: none
+	<!-- Rubric item #10 CSS is error free -->
+*/
+/* Font face rule */
+
+/* Display HTML structural elements as blocks */
+
+header, section, nav {
+	display: block;
+}
+
+/* Set the default padding and margin space */
+
+body {
+	background: rgba(63, 16, 16, 0.3);
+	position: relative;
+	width: 95%;
+	min-width: 1000px;
+	max-width: 1400px;
+}
+
+header h1 {
+	text-align:center;
+	background-color: rgb(63, 16, 16);
+	color: rgb(225, 182, 18);
+	font-size: 1.7em;
+	letter-spacing: 0.4em;
+	line-height: 1.8em;
+	text-indent: 1em;
+}
+
+/* Verticle Navigation List, float left, set width and background color*/
+
+nav.vertical {
+	float: left;
+	width: 15em;
+	background-color: rgb(225, 182, 18);
+}
+
+/* Set sytle for links */
+
+nav.vertical li {
+	font-family: 'Century Gthic', 'sans-serif';
+	font-size: 0.7em;
+	list-style: none;
+	line-height: 1.4em;
+	margin-left: 1em;
+	margin-bottom: 1.2em;
+}
+
+/* Removed underline and set color */
+
+nav.vertical li a {
+	color: rgb(63, 16, 16);
+	text-decoration: none;
+}
+
+/* Create white hover highlight */
+
+nav.vertical li a:hover {
+	color: white;
+}
+
+/* keeps text on right side of my website */
+
+#week07_elements {
+	margin-left: 29%;
+	width: 70%;
+}
+#week08_elements {
+	margin-left: 29%;
+	width: 70%;
+}
+#week09_elements {
+	margin-left: 29%;
+	width: 70%;
+}
+#week10_elements {
+	margin-left: 29%;
+	width: 70%;
+}
+#week11_elements {
+	margin-left: 29%;
+	width: 70%;
+}

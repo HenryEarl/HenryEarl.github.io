@@ -1,0 +1,345 @@
+<!-- Rubric #5 HTML is error free as certified by W3C Markup Validator -->
+<!DOCTYPE html>
+
+<!--  according to the W3C recommendation I should declare the 
+	primary language (en = english) of my WebPages -->
+<html lang="en">
+
+<head>
+
+    <!--  charset attribute specifies the character encoding for 
+    	the HTML document (utf-8 = Unicode) 
+    	see http://www.unicode.org/standard/WhatIsUnicode.html -->
+    <meta charset="utf-8" />
+
+    <title>Millennium Computers</title>
+
+
+    <!-- java script that supports HTML5 for Browsers that do not -->
+    <script src="http://www.tulane.edu/~gnorth/modernizr.js"></script>
+
+
+    <!--  link(s) to a external style sheet(s) go here -->
+    <link href="./mill.css" rel="stylesheet" type="text/css" />
+    <link href="./oform.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<!-- 
+HTML and CSS 6th Edition: Comprehensive
+Author: Jerad Rodgers 
+Date: 11/11/18
+Text Editor: Sublime 3
+-->
+
+<body>
+
+      <header>
+         <img src="mclogo.jpg" alt="Millennium Computers" />
+         <nav class="horizontalNAV">
+            <ul>
+               <li><a href="../index.html">My Home Page</a></li>
+               <li><a href="../week_09/splash.html">Week 9 Splash</a></li>
+               <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/StudentWeb.html">Assignments</a></li>
+               <li><a href="../shortcut/shortcut.htm">Shortcuts</a></li>
+               <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/Week_09/Assignment.html">Week 9 Rubric</a></li>
+               <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/siteIndex.html">SiteIndex</a></li>
+            </ul>
+         </nav>
+      
+         <article>
+            <h1>Purchase Optinos</h1>
+            <p>Thank you for selecting Millenium Computers. 
+            </p>
+            <p>Please fill out the required information below to complete your order.
+            </p>
+            <p>Orders are private and confidential. Millennium Computers
+               will not share your contact information with third 
+               parties, <em>ever</em>.
+            </p>
+         </article>
+      </header>
+
+   <section>
+      <p>Required values are marked by an asterisk (*)</p>
+
+      <!-- Rubric # 13 Validation checks for contact information and regular expression patters for zip code and phone numbers. -->
+      <form id="survey" name="survey"
+            action="http://millcomputers.com/cgi-bin/survery"
+            method="post">
+
+            <!-- Input Boxes Rubric item # 9 -->
+         <fieldset id="custInfo">
+            <legend>Customer Information</legend>
+
+            <label for="fcustname">First Name *</label>
+            <input name="fcustname" id="fcustname"
+                  placeholder="first name" 
+                  required="required" />
+
+            <label for="lcustname">Last Name*</label>
+            <input name="lcustname" id="lcustname"
+                  placeholder="last name" 
+                  required="required" />
+
+            <label for="street">Street address</label>
+            <input name="street" id="street" />
+
+            <label for="city">City</label>
+            <input name="city" id="city" value="Ormond Beach" />
+
+            <label for="state">State (abbr.)</label>
+            <input name="state" id="state" value="FL" />
+
+            <label for="zip">Postal Code</label>
+            <input name="zip" id="zip" 
+                  placeholder="nnnnn (-nnnn)" 
+                  pattern="^\d{5}(\-\d{4})?$" />
+
+            <label for="phone">Phone Number</label>
+            <input name="phone" id="phone" type="tel" 
+                  placeholder="(nnn) nnn-nnnn" 
+                  pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+
+            <label for="email">E-mail *</label>
+            <input name="email" id="email" type="email" 
+                     required="required" />
+
+            <label>Where did you hear about us? <br /> (select all that apply)</label>
+            <select name="infoSrc" id="infoSrc" size="5" multiple="multiple">
+               <option value="internet">Internet</option>
+               <option value="mag">Magazine</option>
+               <option value="news">Newspaper</option>
+               <option value="word">Word of Mouth</option>
+               <option value="other">Other</option>
+            </select>
+
+            <label for="ordersPerMonth">
+               How many times do you order parts per month?
+            </label>
+            <input name="ordersPerMonth" id="ordersPerMonth"
+                        type="number" value="1"
+                        min="0" max="30" step="1" />
+
+            <label for="favForm">What is your favorite form factor?</label>
+            <input name="favForm" id="favForm" list="FormType" />
+            <datalist id="FormType">
+               <option value="ATX" >
+               <option value="Mini-ATX" >
+               <option value="Micro-ATX" >
+               <option value="AT" >
+               <option value="LPX" >
+               <option value="Mini-LPX" >
+            </datalist>
+
+         </fieldset>
+         <fieldset id="experience">
+            <legend>Order Information</legend>
+
+            <label for="Purchasedate">Date of Purchase</label>
+            <input name="Purchasedate" id="Purchasedate" type="date" />
+
+            <label for="receipt">Purchase Number </label>
+            <input name="receipt" id="receipt" 
+                  placeholder="re-nnnnnn" 
+                  pattern="^re\-\d{6}$" />
+
+            <!-- adds the drop down list Rubric Item # 10 -->
+
+            <label for="ordertype">Order type</label>
+            <select name="ordertype" id="ordertype">
+               <option value="type1">InStore Pickup</option>
+               <option value="type2">Delivery</option>
+               <option value="type3" selected="selected">Delivery and Installation</option>
+            </select>
+
+            <label for="motherboard">Motherboard</label>
+            <select name="motherboard" id="motherboard">
+               <option value="type1">MSI</option>
+               <option value="type2">Gigabyte</option>
+               <option value="type3" selected="selected">Asus</option>
+            </select>
+
+            <label for="VideoCard">Video Card (GPU)?</label>
+            <select name="VideoCard" id="VideoCard">
+               <option value="type1">2080</option>
+               <option value="type2">1080</option>
+               <option value="type3" selected="selected">2080ti</option>
+            </select>
+
+            <label for="orderPSpeed">Processor Speed</label>
+            <select name="orderPSpeed" id="orderPSpeed">
+               <option value="type1">5.2 GHz</option>
+               <option value="type2">4 GHz</option>
+               <option value="type3" selected="selected">3.2 GHz</option>
+            </select>
+
+            <label for="orderMem">Memory</label>
+            <select name="orderMem" id="orderMem">
+               <option value="type1">8 GB</option>
+               <option value="type2">4 GB</option>
+               <option value="type2">1 GB</option>
+               <option value="type3" selected="selected">2 GB</option>
+            </select>
+
+            <label for="orderMonitor">Monitor Size</label>
+            <select name="orderMonitor" id="orderMonitor">
+               <option value="type1">15"</option>
+               <option value="type2">17"</option>
+               <option value="type2">19"</option>
+               <option value="type3" selected="selected">21"</option>
+            </select>
+
+            <label for="orderDrive">Hard Drive Size</label>
+            <select name="orderDrive" id="orderDrive">
+               <option value="type1">240 GB</option>
+               <option value="type2">500 GB</option>
+               <option value="type2">750 GB</option>
+               <option value="type3" selected="selected">1 TB</option>
+            </select>
+
+            <!-- Option button group -->
+
+            <label>Solid State Drive?</label>
+            <fieldset class="optionGroup">
+               <label for="sYes">Yes</label>
+               <input type="radio" name="SSD" id="sYes" 
+                        value="yes" />
+
+               <label for="sNo">No</label>
+               <input type="radio" name="SSD" id="sNo" 
+                        value="no" />
+            </fieldset>
+
+            <label>DVD Drive?</label>
+            <fieldset class="optionGroup">
+               <label for="dYes">Yes</label>
+               <input type="radio" name="DVD" id="dYes" 
+                        value="yes" />
+
+               <label for="dNo">No</label>
+               <input type="radio" name="DVD" id="dNo" 
+                        value="no" />
+            </fieldset>
+
+            <label>Tuner Card?</label>
+            <fieldset class="optionGroup">
+               <label for="tYes">Yes</label>
+               <input type="radio" name="TunerCard" id="tYes" 
+                        value="yes" />
+
+               <label for="tNo">No</label>
+               <input type="radio" name="TunerCard" id="tNo" 
+                        value="no" />
+            </fieldset>
+
+            <label>Media Card Reader?</label>
+            <fieldset class="optionGroup">
+               <label for="MedYes">Yes</label>
+               <input type="radio" name="MediaCard" id="MedYes" 
+                        value="yes" />
+
+               <label for="MedNo">No</label>
+               <input type="radio" name="MediaCard" id="MedNo" 
+                        value="no" />
+            </fieldset>
+
+            <label>Warrenty?</label>
+            <fieldset class="optionGroup">
+               <label for="WYes">Yes</label>
+               <input type="radio" name="Warrenty" id="WYes" 
+                        value="yes" />
+
+               <label for="WNo">No</label>
+               <input type="radio" name="Warrenty" id="WNo" 
+                        value="no" />
+            </fieldset>
+         
+            <label>Service Plan?</label>
+            <fieldset class="optionGroup">
+               <label for="SerYes">Yes</label>
+               <input type="radio" name="ServiceP" id="SerYes" 
+                        value="yes" />
+
+               <label for="ServNo">No</label>
+               <input type="radio" name="ServiceP" id="ServNo" 
+                        value="no" />
+            </fieldset>
+
+            <!-- Rubric #11 Check Boxes -->
+
+            <label>Liquid CPU Cooler?</label>
+            <input type="checkbox" name="CPUcooler" id="CPUcooler" value="yes">
+
+            <label>PC Chassis?</label>
+            <input type="checkbox" name="chassis" id="chassis" value="yes">
+
+            <label>Windows?</label>
+            <input type="checkbox" name="ripoff" id="ripoff" value="yes">
+
+            <label>Speakers?</label>
+            <input type="checkbox" name="speakers" id="speakers" value="yes">
+
+            <label>UPS System?</label>
+            <input type="checkbox" name="UPSsys" id="UPSsys" value="yes">
+
+            <label>Webroot Antivirus?</label>
+            <input type="checkbox" name="WRanti" id="WRanti" value="yes">
+
+            
+            <!-- Slider -->
+
+            <label>Rate the Parts List<br />
+                  (0= poor; 10 = great)</label>
+            <label class="sliderLabel">0</label>            
+            <input name="SurvPlist" id="SurvPlist" type="range" value="5"
+                  min="0" max="10" step="1" />
+            <label class="sliderLabel">10</label>
+
+            <label>Rate the Parts Quality<br />
+                  (0= poor; 10 = great)</label>
+            <label class="sliderLabel">0</label>
+            <input name="SurvPqual" id="SurvPqual" type="range" value="5"
+                  min="0" max="10" step="1" />
+            <label class="sliderLabel">10</label>
+
+            <!-- Creates the text area box -->
+            <label for="comments">Tell us more about your experience!</label>
+            <textarea name="comments" id="comments"></textarea>
+         
+      </fieldset>
+
+            <!--  Rubric Item 12 Form buttons, Send Order, Cancel Order, Contact Me-->
+            <label id="newsletter">
+               <input type="checkbox" name="newscb" />
+               E-mail me your newsletter for great coupons and specials!
+            </label>
+
+         <!-- Submit and Reset Buttons -->
+
+         <p>
+            <input type="submit" value="Submit My Survey" />
+            <input type="reset" value="Cancel" />
+
+      </form>
+      <p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+   </section>
+
+   <footer>
+      <address>
+         Millennium Computers &bull;
+         811 Beach Drive &bull;
+         Ormond Beach, FL  32175 &bull;
+         (386) 555 - 7499 
+      </address>
+   </footer>
+
+   </body>
+
+</html>

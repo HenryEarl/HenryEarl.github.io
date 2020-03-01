@@ -1,0 +1,86 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 4
+   Case Problem 4
+
+   Gresham Layout Style Sheet
+   Author: Faye Dawson && Jerad Rodgers
+   Date:   3/1/2014
+
+   Filename:         gcc_layout.css
+   Supporting Files: 
+
+*/
+
+header h1, header, nav, section, aside, article, footer {
+   display: block;
+}
+
+/* Body Layout */
+
+body {
+   width: 1000px;
+   /* Centering Page */
+   margin: 0px auto;
+   padding: 0px;
+   color: rgb(255,0,0);
+}
+
+/* Header Layout */
+
+header {
+   margin: 0px auto;
+   width: 100%;
+   height: 120px;
+}
+h1 {
+   font-size: 2em;
+   color:rgba(0,0,0, .8);
+}
+h2 {
+   color: rgba(0,0,0, .8);
+}
+* {xoutline: 1px solid green}
+
+/* Image Header Alignment for Main Header Image */
+header h1 {
+   text-align: center;
+}
+/* Navigation list */
+nav li {
+}
+nav {
+}
+/* Section styles */
+section {
+   border-right: 1px solid black;
+   float: left;
+   width: 35%;
+   padding-right: 3px;
+}
+/* Article styles */
+article img {
+   width: 150px;
+   float: right;
+   margin: 15px;
+}
+/* Aside styles */
+aside {
+   float: left;
+   margin-left: 15px;
+   width: 39%;
+}
+aside blockquote cite{
+  margin-left: 2.5em;
+}
+/* Footer styles */
+footer {
+   clear: left;
+   border-top: 1px solid black;
+   text-align: center;
+      /* Padd the bottom footer */
+   padding-bottom: 0.45em;
+   padding-top: .6em;
+   color: black;
+   
+}

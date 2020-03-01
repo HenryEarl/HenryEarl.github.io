@@ -1,0 +1,228 @@
+<!-- 20 points - The repeating Rubric Items from past Assignments. These are: (1) start with HTML Template; (2) use a folder; (3) HTML and (4) CSS are well documented/commented. (5) HTML is error free as certified by W3C Markup Validator. (6) CSS style sheet(s) are error free as certified by W3C CSS Validation Service. --> 
+<!-- Rubric Item #4 -->
+<!DOCTYPE html>
+
+<!--  according to the W3C recommendation I should declare the 
+   primary language (en = english) of my WebPages -->
+<html lang="en">
+
+<head>
+
+    <!--  charset attribute specifies the character encoding for 
+      the HTML document (utf-8 = Unicode) 
+      see http://www.unicode.org/standard/WhatIsUnicode.html -->
+    <meta charset="utf-8" />
+
+    <title>Smores Crumble</title>
+
+
+    <!-- java script that supports HTML5 for Browsers that do not -->
+    <script src="http://www.tulane.edu/~gnorth/modernizr.js"></script>
+
+
+    <!--  link(s) to a external style sheet(s) go here -->       
+   <link href="dwbase.css" rel="stylesheet" />
+   <link href="dwlayout.css" rel="stylesheet" />
+   <link href="dweffects.css" rel="stylesheet" />
+   <link href="print.css" rel="stylesheet" media="print" />
+
+      <!-- 
+      HTML and CSS 6th Edition: Comprehensive
+      Author: Jerad Rodgers
+      Date: 11-30-2018
+      Text Editor: Sublime Text 3
+      New Perspectives on HTML and CSS
+      Tutorial 8
+      Case Problem 1
+      dessertWeb Sample Recipe
+      Filename:         recipe.htm
+      Supporting files: dw.png, dwbase.css, dweffects.css, dwlayout.css,
+                        dwprint.css, halfstar.png, modernizr-1.5.js,
+                        star.png, torte.jpg
+      -->
+
+   </head>
+
+   <body>
+
+      <header>
+         <div id="div1">
+            Recipes | Ingredients | Articles <br />
+            <input type="search" id="sbox" name="sfield" />
+            <input type="button" id="sbutton" value="Search" />
+         </div>
+         <div id="div2">
+            Password <br />
+            <input type="text" id="pwd" name="pwd" placeholder="password" />
+            <input type="button" id="lbutton" value="Log In" />
+         </div>
+         <div id="div3">
+            User Name <br />
+            <input type="text" id="user" name="user" placeholder="username" />
+         </div>
+
+
+         <h1>dessertWeb</h1>
+         <nav class="horizontal">
+            <ul>
+               <li><a href="../index.html">My Home Page</a></li>
+               <li><a href="./smore.html">Smore's</a></li>
+               <li><a href="./links.html">Links</a></li>
+               <li><a href="../week_11/splash.html">Splash</a></li>
+               <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/Week_11/Assignment.html">Rubric</a></li>
+               <li><a href="../week_11/treebook.htm">TreeBook</a></li>
+               <li><a href="#">messages</a></li>
+            </ul>
+         </nav>
+
+      </header>
+
+
+      <section id="left">
+
+         <nav class="vertical">
+            <h1>Categories</h1>
+            <ul>
+               <li><a href="#">Cakes</a></li>
+               <li><a href="#">Candies</a></li>
+               <li><a href="#">Chocolate</a></li>
+               <li><a href="#">Cookies</a></li>
+               <li><a href="#">Crisps</a></li>
+               <li><a href="#">Crumbles</a></li>
+               <li><a href="#">Custards</a></li>
+               <li><a href="#">Frozen Treats</a></li>
+               <li><a href="#">Gelatins</a></li>
+               <li><a href="#">Liqueur Desserts</a></li>
+               <li><a href="#">Marshmallows</a></li>
+               <li><a href="#">Meringues</a></li>
+               <li><a href="#">Mousse</a></li>
+               <li><a href="#">Pies</a></li>
+               <li><a href="#">Pralines</a></li>
+               <li><a href="#">Sauces</a></li>
+               <li><a href="#">Truffles</a></li>
+            </ul>
+         </nav>
+
+         <nav class="vertical">
+            <h1>Related Recipes</h1>
+            <ul>
+               <li><a href="#">Apple Crisp</a></li>
+               <li><a href="#">Apple Fingers</a></li>
+               <li><a href="#">Apple Streudel</a></li>
+               <li><a href="#">Cherry Torte</a></li>
+               <li><a href="#">Fruit Pie</a></li>
+               <li><a href="#">Parfait</a></li>
+               <li><a href="#">Strawberry Torte</a></li>
+            </ul>
+         </nav>
+
+      </section>
+
+      <section id="center">
+
+         <article>
+            <hgroup>
+               <h1>Smores Crumble
+                   <img src="star.png" alt="3 1/2 stars" />
+                   <img src="star.png" alt="" />
+                   <img src="star.png" alt="" />
+                   <img src="halfstar.png" alt="" />
+               </h1>
+               <h2>by Lemking</h2>
+            </hgroup>
+
+            <img id="dishimg" src="smore.jpg" alt="Smore image" width="250" />
+            <p>This crispy oat and graham cracker crumble will have you spooning in for seconds.
+            </p>
+            <p><a href="#">Rate/Review</a> | <a href="#">Review Page</a></p>
+         </article>
+
+            <aside>
+               <h1>Recipe Box</h1>
+               <ul>
+                  <li><a href="#">Add to Recipe Box</a></li>
+                  <li><a href="#">Add to Shopping List</a></li>
+                  <li><a href="#">Share Recipe</a></li>
+                  <li><a href="#">Add to Menu</a></li>
+                  <li><a href="#">Customize Recipe</a></li>
+                  <li><a href="#">Share/Email</a></li>
+               </ul>
+            </aside>
+
+            <h2>Ingredients</h2>	
+            <ul>
+                  <li>1/2 cup butter</li>
+                  <li>¾ cup unsalted butter, softened</li>
+                  <li>1 cup firmly packed light brown sugar</li>
+                  <li>1 cup old-fashioned oats</li>
+                  <li>¾ cup all-purpose flour</li>
+                  <li>¾ cup graham cracker crumbs</li>
+                  <li>1 teaspoon baking powder</li>
+                  <li>1 teaspoon kosher salt</li>
+                  <li>1 teaspoon ground cinnamon</li>
+                  <li>2 cups marshmallows, halved crosswise</li>
+                  <li>2 (4-ounce) semisweet chocolate bars, coarsely chopped</li>
+                  <li>Garnish: melted chocolate</li>
+            </ul>
+
+            <h2>Directions</h2>
+            <ol>
+               <li>Preheat oven to 350°. Spray a 10-inch cast-iron skillet with cooking spray.</li>
+               <li>In a large bowl, beat butter and sugar at medium speed with a mixer until light and fluffy, 3 to 4 minutes. In a medium bowl, stir together oats, flour, graham cracker crumbs, baking powder, salt, and cinnamon. Gradually add oat mixture to butter mixture, beating until combined.</li>
+               <li>Firmly press two-thirds of crumble mixture into bottom of prepared skillet. Top with marshmallows and chocolate. Sprinkle with remaining crumble mixture.</li>
+               <li>Bake until golden brown, 20 to 24 minutes. Let cool 10 minutes before serving. Garnish with melted chocolate, if desired.</li>
+            </ol>
+      </section>
+
+      <section id="right">
+
+         <h1>Reviews</h1>
+         <blockquote>
+            <p>
+               <img src="star.png" alt="4 stars" /> <img src="star.png" alt="" />
+               <img src="star.png" alt="" /> <img src="star.png" alt="" />
+            </p>
+            <p>This is my personal favorite dish.</p>
+            <p>
+               &mdash; Reviewed on Sep. 22, 2014 by Jerad.
+            </p>
+         </blockquote>
+                
+         <blockquote>
+            <p>
+               <img src="star.png" alt="2 stars" /> <img src="star.png" alt="" />
+            </p>
+            <p>My friends always ask when my wife is going to make this desert. The kids absolutly love the chocolate. I can not keep my hands off of this dish.</p>
+            <p>
+               &mdash; Reviewed on Sep. 1, 2014 by Jerad.
+            </p>
+         </blockquote>
+
+
+         <blockquote>
+            <p>
+               <img src="star.png" alt="3 1/2 stars" /> <img src="star.png" alt="" />
+               <img src="star.png" alt="" /> <img src="halfstar.png" alt="" />
+            </p>
+            <p>Delicious!! Make sure to eat it warm. Room temperature is fine, but the warm is just amazing.</p>
+            <p>
+               &mdash; Reviewed on August 28, 2014 by Jerad.
+            </p>
+         </blockquote>
+      </section>
+
+      <footer>
+          dessertWeb &copy; 2014 English (US)
+          <span>
+            <a href="#">About</a>
+            <a href="#">Developers</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Help</a>
+          </span>
+      </footer>
+
+   </body>
+
+</html>
+

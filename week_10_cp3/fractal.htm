@@ -1,0 +1,190 @@
+<!-- Rubric # 4 - 20 points - The repeating Rubric Items from past Assignments. -->
+<!DOCTYPE html>
+
+<!--  according to the W3C recommendation I should declare the
+	primary language (en = english) of my WebPages -->
+<html lang="en">
+
+<head>
+
+    <!--  charset attribute specifies the character encoding for
+    	the HTML document (utf-8 = Unicode)
+    	see http://www.unicode.org/standard/WhatIsUnicode.html -->
+    <meta charset="utf-8" />
+
+    <title>Exploring the World of Fractals</title>
+
+
+    <!-- java script that supports HTML5 for Browsers that do not -->
+    <script src="http://www.tulane.edu/~gnorth/modernizr.js"></script>
+
+
+    <!--  link(s) to a external style sheet(s) go here -->
+    <link href="fstyles.css" rel="stylesheet" />
+    <link href="clips.css" rel="stylesheet" />
+
+</head>
+
+      <!--
+      HTML and CSS 6th Edition: Comprehensive
+      Author: Jerad Rodgers
+      Date: 11/13/2018
+      Text Editor: Sublime 3
+      New Perspectives on HTML and CSS
+      Tutorial 7
+      Case Problem 3
+      Exploring the World of Fractals
+      Filename:         fractal.htm
+      Supporting files: Cmplx.class, Controls.class, fback.jpg, flogo.jpg,
+                        FracPanel.class, fstyles.css, Mandel.class,
+                        mandel.mp4, mandel.swf, mandel.webm,
+                        modernizr-1.5.js, zoom.png
+      -->
+
+   <body>
+
+      <header><img src="flogo.jpg" alt="Exploring the World of Fractals" /></header>
+
+      <nav>
+         <ul>
+            <!-- 25 points - Use the menu on left side of your fractal WebPage to link to sites external to yours that are related to fractals and to Benoit Mandelbrot. -->
+            <li><a href="../index.html">Home</a></li>
+            <li class="newTopic"><a href="../week_10/splash.html">Splash</a></li>
+            <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/StudentWeb.html">Assignment</a></li>
+            <li><a href="../shortcut/shortcut.htm">Shortcuts</a></li>
+            <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/Week_10/Assignment.html">Rubric</a></li>
+            <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/siteIndex.html">SiteIndex</a></li>
+
+            <li class="newTopic"><a href="http://www-history.mcs.st-andrews.ac.uk/Biographies/Julia.html">Julia Biography</a></li>
+            <li><a href="https://www.britannica.com/biography/Gaston-Maurice-Julia">Gaston Maurice Julia</a></li>
+            <li><a href="http://www.mathcentre.ac.uk/resources/uploaded/mc-ty-polynomial-2009-1.pdf">Polynomial functions</a></li>
+            <li><a href="https://www.khanacademy.org/math/algebra2/polynomial-functions/modal/v/binomial-theorem">Intro to the Binomial Theorem</a></li>
+            <li><a href="https://www.sscc.edu/home/jdavidso/Math/Catalog/Polynomials/Polynomials.html">Polynomial Functions</a></li>
+
+            <li class="newTopic"><a href="http://www-groups.dcs.st-and.ac.uk/history/Biographies/Mandelbrot.html">Mandelbrot Bibliography</a></li>
+            <li><a href="https://users.math.yale.edu/mandelbrot/">Benoit B. Mandelbrot</a></li>
+            <li><a href="https://users.math.yale.edu/~bbm3/web_pdfs/encyclopediaBritannica.pdf">Fractals and the Geometry of Nature</a></li>
+            <li><a href="https://cosmosmagazine.com/mathematics/fractals-in-nature">Fractals in Nature</a></li>
+            <li><a href="http://rspa.royalsocietypublishing.org/content/423/1864/3.short">Fractal Geometry</a></li>
+
+            <li class="newTopic"><a href="https://books.google.com/books?hl=en&lr=&id=H6jqBwAAQBAJ&oi=fnd&pg=PA1&ots=eTysutN6Yl&sig=9H-HVGQ5CPAtnRqmtJil9MU4s1s#v=onepage&q&f=false">Fractals in Finance</a></li>
+            <li><a href="https://medium.com/todd-moses/tensorflow-and-fractal-patterns-2766a3055bc">TensorFlow</a></li>
+            <li><a href="https://www.investopedia.com/articles/investing/012115/fractal-markets-theory.asp">Fundamentals of Fractal Markets Thoery</a></li>
+            <li><a href="https://www.worldfinance.com/the-econoclast/fractal-finance">Fractal Finance</a></li>
+            <li><a href="https://users.math.yale.edu/~bbm3/web_pdfs/threeFractalModels.pdf">Fractal Models</a></li>
+            
+            <li class="newTopic"><a href="https://www.nature.com/articles/nature12186">Hofstadter’s butterfly</a></li>
+            <li><a href="http://science.sciencemag.org/content/350/6265/1231">Evidence for a fractional</a></li>
+            <li><a href="http://iopscience.iop.org/article/10.1088/0305-4470/38/26/013/meta">Bohmian approach</a></li>
+            <li><a href="https://aip.scitation.org/doi/abs/10.1063/1.2741555">Talbot effect</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S0960077906001330">Quantum motion</a></li>
+
+
+            <li class="newTopic"><a href="https://ebookcentral.proquest.com/lib/tulaneu/reader.action?docID=1081663&query=">Mathmatical Foundations</a></li>
+            <li><a href="https://www-morganclaypool-com.libproxy.tulane.edu/doi/abs/10.2200/S00373ED1V01Y201107MAS011">Chaotic Maps</a></li>
+            <li><a href="https://www-sciencedirect-com.libproxy.tulane.edu/bookseries/mathematics-in-science-and-engineering/vol/209">Math in Engineering</a></li>
+            <li><a href="https://www.amazon.com/gp/product/0471922870">Fractal Geometry</a></li>
+            <li><a href="https://users.math.yale.edu/public_html/People/frame/Fractals/">Fractal Geometry 2</a></li>
+
+            <li class="newTopic"><a href="#">Math Games</a></li>
+            <li><a href="#">Puzzles</a></li>
+            <li><a href="#">The Game of Life</a></li>
+            <li><a href="#">Fractals</a></li>
+            <li class="newTopic"><a href="#">Demos</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">The Mailbag</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+      </nav>
+
+      <section>
+
+         <figure>
+          <!-- 20 points - A video element that includes controls that loop back when finished -->
+          <!--  5 points - A graphic as a poster image for the video element. -->
+          <!--   5 points - A graphic as a poster image for the video element. -->
+          <video controls="controls" poster="zoom.png" loop="loop">
+                <source src="mandel.mp4" />
+                <source src="mandel.webm" />
+
+                <object data="mandel.swf"
+                    type="application/x-shockwave-flash">
+                    <param name="movie" value="mandel.swf" />
+                    <param name="quality" value="high" />
+                    <param name="menu" value="false" />
+
+                    You must have the 
+                    <a href="http://www.adobe.com/products/shockwaveplayer/">
+                      Shockwave Player
+                    </a>
+                    to play the video clip.
+                </object>
+            </video>
+
+
+            <figcaption>Fly into the Mandelbrot Set</figcaption>
+         </figure>
+
+         <p>A fractal is a geometric object that retains
+            its complexity under any level of magnification. Many fractals are
+            <i>self-similar</i> in that the fractal image is infinitely repeated on
+            a smaller scale as one "zooms" into the object. The most famous of the
+            fractal objects is the <i>Mandelbrot Set</i> named after its discoverer,
+            Benoit B. Mandelbrot. As you can see in the accompanying video, the
+            Mandelbrot Set, a bug-shaped object, appears again and again as one
+            magnifies the image.
+         </p>
+
+         <p>Fractals are not simply an abstract geometric concept. Fractals appear
+            everywhere in nature: from the irregular shape of a coastline to the outlines
+            of trees, clouds, and mountains. The application of fractal geometry to
+            science and physics has allowed mathematicians and physicists to describe
+            phenomena that had, until recently, eluded description.</p>
+
+         <article>
+            <h2>Ready to explore your own fractals? Great. Use the Java
+                applet below.
+            </h2>
+
+            <ul>
+               <li>To improve the resolution of the fractal image, change the
+                   value in the drop-down list box (a value of 1 is the most
+                   precise; 10 is the least) and click <span>Redraw</span>
+               </li>
+               <li>To magnify a particular section of the fractal, click
+                   <span>Zoom In</span> and drag a rectangle over the section you
+                   want to magnify.
+               </li>
+               <li>To switch between the Mandelbrot Set and the Julia Set
+                   (another type of fractal, closely related to the Mandelbrot
+                    Set), click <span>Switch [M &lt; J]</span> and then click a spot
+                    on the Mandelbrot Set.
+               </li>
+            </ul>
+
+            <p>
+              <!-- 10 points (extra credit) - An object element that contains a Java applet. You earn extra credit by completing items 5, 6, 7, 8, 9, 10, 11, 12 from the Textbook description of Case Problem 3. -->
+              <object type="application/x-java-applet"
+                width="280" height="240">
+
+                  <param name="code" value="Mandel.class" />
+                  <br /><br />
+                  To view a scrolling marquee, get the latest <a href="https://www.java.com/en/download/">
+                    Java Plug-in.
+                  </a>
+
+              </object>
+
+              <br />
+              This applet is generously provided by
+                 <a href="http://daa.com.au/~james/fractals/">James Henstridge</a>.
+           </p>
+
+
+         </article>
+
+      </section>
+
+   </body>
+
+</html>

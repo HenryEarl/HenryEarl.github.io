@@ -1,0 +1,40 @@
+/*
+	Jerad's shortcut Stylesheet
+	Author: Jerad Rodgers
+	Date: 10/01/2018
+	Filename: shortcut_style.css
+	supporting files: none
+*/
+/* Font face rule *//* Body styles */
+body {
+	background-color: rgba(63, 16, 16, 0.3);
+	font-family: NobileRegular, Verdana, Geneva, sans-serif;
+	line-height: 1.4em;
+}
+h1 {
+    color: black;
+    text-align: center
+}
+nav.vertical li.lTitle {
+   font-size: 0.9em;
+   margin-top: 30px;
+   margin-bottom: 12px;
+   color: black;
+   font-weight: bold;
+}
+footer {
+	background-color: rgb(63, 16, 16);
+	color: rgb(225, 182, 18);
+	font: normal small-caps 1.1em/3.5em 'Times New Roman', Times, serfif;
+	text-align: center;
+}
+h1 {
+	background-color: rgb(63, 16, 16);
+	color: rgb(225, 182, 18);
+	font-size: 1.7em;
+	letter-spacing: 0.4em;
+	line-height: 1.8em;
+	text-indent: 1em;
+	/* Center Text */
+	text-align: center;
+}

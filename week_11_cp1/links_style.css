@@ -1,0 +1,101 @@
+/*
+	Jerad's shortcut Stylesheet
+	Author: Jerad Rodgers
+	Date: 10/01/2018
+	Filename: shortcut_style.css
+	supporting files: none
+*/
+/* Font face rule *//* Body styles */
+body {
+	background-color: rgba(63, 16, 16, 0.3);
+	font-family: NobileRegular, Verdana, Geneva, sans-serif;
+	line-height: 1.4em;
+	text-align: center;
+}
+h1 {
+    color: black;
+    text-align: center
+}
+nav.vertical li.lTitle {
+   font-size: 0.9em;
+   margin-top: 30px;
+   margin-bottom: 12px;
+   color: black;
+   font-weight: bold;
+}
+
+header nav.horizontal {
+
+   height: 38px;
+   width: 98%;
+   margin: 0px 1%;
+}
+
+
+header nav.horizontal li {
+   border: 1px solid rgb(171, 171, 171);
+   display: block;
+   font-family: Tahoma, Geneva, sans-serif;
+   font-size: 12px;
+   font-weight: bold;
+   float: left;
+   height: 30px;
+   letter-spacing: =3px;
+   line-height: 30px;
+   margin: 3px 0.5%;
+   text-align: center;
+   width: 12%;
+}
+
+header nav.horizontal li:first-of-type {
+   margin-left: 4%;
+}
+header nav.horizontal li:last-of-type {
+   margin-right: 4%;
+}
+
+header nav.horizontal li a {
+   color: rgb(63, 16, 16);
+}
+footer {
+	background-color: rgb(63, 16, 16);
+	color: rgb(225, 182, 18);
+	font: normal small-caps 1.1em/3.5em 'Times New Roman', Times, serfif;
+	text-align: center;
+}
+h1 {
+	background-color: rgb(63, 16, 16);
+	color: rgb(225, 182, 18);
+	font-size: 1.7em;
+	letter-spacing: 0.4em;
+	line-height: 1.8em;
+	text-indent: 1em;
+	/* Center Text */
+	text-align: center;
+}
+
+/* Rubric # 7; 5 of 5 implement opacity */ 
+
+figure#photo2 {
+	position: absolute;
+	top: 200px;
+	left: 25px;
+
+   -o-transform: rotate(-30deg);
+   -moz-transform: rotate(-30deg);
+   -webkit-transform: rotate(-30deg);
+   -ms-transform: rotate(-30deg);
+   transform: rotate(-30deg);
+}
+
+figure#photo1 {
+	position: absolute;
+	top: 200px;
+	right: 25px;
+
+   -o-transform: rotate(30deg);
+   -moz-transform: rotate(30deg);
+   -webkit-transform: rotate(30deg);
+   -ms-transform: rotate(30deg);
+   transform: rotate(30deg);
+}

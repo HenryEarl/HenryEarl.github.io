@@ -1,0 +1,113 @@
+<!-- Rubric Item #2 include minimum HTML Template -->
+<!-- Rubric Item #3 Web page has Visual appeal -->
+<!-- Rubric Item #8 HTML is error free -->
+<!DOCTYPE html>
+
+<!--  according to the W3C recommendation I should declare the 
+   primary language (en = english) of my WebPages -->
+<html lang="en">
+
+<head>
+
+    <!--  charset attribute specifies the character encoding for 
+      the HTML document (utf-8 = Unicode) 
+      see http://www.unicode.org/standard/WhatIsUnicode.html -->
+    <meta charset="utf-8" />
+    <title>Website Elements</title>
+
+    <!-- java script that supports HTML5 for Browsers that do not -->
+    <script src="http://www.tulane.edu/~gnorth/modernizr.js"></script>
+
+
+    <!--  link(s) to a external style sheet(s) go here -->
+    <link href="../week_06/gcc_styles.css" rel="stylesheet" type="text/css" />
+    <link href="../week_06/gcc_layout.css" rel="stylesheet" type="text/css" />
+    <!-- Rubric Item # 10 Embedded Style Sheet -->
+    <style type="text/css">
+    .horizontal {
+      text-align: center;
+      font-size: 25px;
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    </style>
+      
+
+</head>
+
+<!-- 
+HTML and CSS 6th Edition: Comprehensive
+New Perspectives on HTML and CSS
+The Gresham Children's Choir
+Author: Jerad Rodgers
+Date: 10/12/18
+Text Editor: Sublime 3
+Tutorial 3
+Case Problem 4
+Filename: choir.htm
+Supporting files: gcc_layout.css, gcc_styles.css, gcclogo.png
+-->
+   <body>
+
+      <header>
+         <h1><img src="../week_06/gcclogo.png" alt="Gresham's Children Choir" /></h1>
+      </header>
+
+      <nav class="horizontal">
+         <ul>
+          <!-- Rubric Items #11 link from Gresham WebSite to Assignments WebSite page -->
+            <li><a href="../index.html">My Home Page</a></li>
+            <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/StudentWeb.html">Assignments</a></li>
+            <li><a href="../shortcut/shortcut.htm">Shortcuts</a></li>
+            <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/Week_06/Assignment.html">Week 6 Rubric</a></li>
+            <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/siteIndex.html">SiteIndex</a></li>
+         </ul>
+      </nav>
+
+      <nav class="vertical">
+         <ul>
+            <li><a href="../week_06/choir.htm">Choir Homepage</a></li>
+            <li><a href="../website_elements/week_06_elements.htm">Elements</a></li>
+            <li><a href="../week_06/Performing_arts.htm">Perfoming Arts</a></li>
+         </ul>
+      </nav>
+
+      <section>
+         <h1>Website Elements</h1>
+         <p>
+            This Webpage design proved to be the most challanging so far. I had initial intentions to make my horizontal list encapsalated with a border. I started by looking at other websites for help. I did find examples for utilizing the .horizontal selector from <a href="http://knowlscodes.com/portfolio/options/proj4/choir.htm">Knowlscodes</a>. I felt that copying the design and tweaking it to fit my needs would be plagarism. All of my attempts to modify the background color for this single element failed. I tried for several hours while flying to North Carolina to visit friends and family. I ended up abandoning this idea in order to focus on the overall layout of the paragraphs. After adding webfonts to the stylesheet, this proved to be very useful. I was successfully able to move the text away from the centered border. In my opinion it is more pleasing to have structure in my page over stylish borders and matching colors. Both would make my page more visualy aeshetic, I felt that the latter issue to be more important. 
+         </p>
+
+         <article>
+            <h2>Trusted Tools</h2>
+            <p>
+               The tool I used the most was the element inspector provided by my browser, FireFox. This inspection tool allowed me to change elements and move things around without having to constantly save and refresh pages. The inspection tool also allowed me to inspect other webpages for reference purposes. Seeing how others use style sheets to move elements around really played a huge role in my success for completing this project.
+            </p>
+            <p>
+                Another useful utility at my disposal was the pdf version of our text. Being able to quickly search for keywords to find references to help guide my desing were crucial. 
+            </p>
+         </article>
+
+      </section>
+
+      <aside>
+         <h2>Final Thoughts</h2>         
+            <p>
+             When creating my Website Elements page for this week, I decided to use the same style and layout sheets created for the Choir homepage. I felt this would save me a lot of valuable time. This is also useful in learning how to design future websites that will encorporate the same style sheets. A fear that comes to mind is changing this page to utilize my home page format. But understanding style sheets should make this obstacle bearable if needed. 
+            </p>
+            <p>
+              I would also recommend linking the Rubric for Assignments to your websites if availble. This was also very useful when adding the finishing touches to my webiste. 
+            </p>
+      </aside>
+
+
+      <footer>
+         <address>
+            Gresham Children's Choir &#183;
+            Mentor, OH 44061 &#183;
+            (440) 555-3811
+         </address>
+      </footer>
+
+   </body>
+</html>
