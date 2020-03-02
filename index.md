@@ -13,6 +13,16 @@ You can use the [editor on GitHub](https://github.com/HenryEarl/HenryEarl.github
          </ul>
     </nav>
 
+ <nav class="horizontalNAV">
+            <ul>
+                <li><a href="./February.html">Chamberlain</a></li>
+                <li><a href="../week_08/sched.htm">KPAF Nightly</a></li>
+                <li><a href="../website_elements/week_07_elements.htm#week08_elements">Elements</a></li>
+                <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/Week_08/Assignment.html">Rubric</a></li>
+                <li><a href="./week8_links.html">Links</a></li>
+            </ul>
+        </nav>
+
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
