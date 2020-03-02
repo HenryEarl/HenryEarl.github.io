@@ -1,10 +1,17 @@
 ## Hello World
 
-<p><a href="./aboutme.md">Link to another page</a>.</p>
+<p><a href="./aboutme">About Me</a>.</p>
 
 You can use the [editor on GitHub](https://github.com/HenryEarl/HenryEarl.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-
+ <nav class="vertical">
+         <ul>
+            <li><a href="../index.html">My Home Page</a></li>
+            <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/StudentWeb.html">Assignments</a></li>
+            <li><a href="../shortcut/shortcut.htm">Shortcuts</a></li>
+            <li><a href="http://www.tulane.edu/~gnorth/2018Fall/CPST-2400-10/siteIndex.html">SiteIndex</a></li>
+         </ul>
+    </nav>
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
