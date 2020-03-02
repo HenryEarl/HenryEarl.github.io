@@ -22,6 +22,11 @@ You can use the [editor on GitHub](https://github.com/HenryEarl/HenryEarl.github
                 <li><a href="./week8_links.html">Links</a></li>
             </ul>
         </nav>
+        <section id="downloads">          
+            <a href="https://github.com/pages-themes/hacker/zipball/master" class="btn">Download as .zip</a>
+            <a href="https://github.com/pages-themes/hacker/tarball/master" class="btn">Download as .tar.gz</a>          
+          <a href="https://github.com/pages-themes/hacker" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
