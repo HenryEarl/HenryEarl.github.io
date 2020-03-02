@@ -1,9 +1,5 @@
 <header>
       <div class="container">
-        <a id="a-title" href="/hacker/">
-          <h1>Hacker theme</h1>
-        </a>
-        <h2>Hacker is a theme for GitHub Pages.</h2>
 
         <section id="downloads">
           
