@@ -1,15 +1,9 @@
-<header>
-      <div class="container">
-
-        <section id="downloads">
-          
+<div class="container">
             <a href="https://github.com/pages-themes/hacker/zipball/master" class="btn">Download as .zip</a>
-            <a href="https://github.com/pages-themes/hacker/tarball/master" class="btn">Download as .tar.gz</a>
-          
+            <a href="https://github.com/pages-themes/hacker/tarball/master" class="btn">Download as .tar.gz</a>          
           <a href="https://github.com/pages-themes/hacker" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+</div>
+
 ## Hello World
 
 <p><a href="./aboutme">About Me</a>.</p>
