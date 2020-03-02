@@ -1,12 +1,14 @@
-# Contributor Covenant Code of Conduct
+# About
 
-## Our Pledge
+## Henry Earl
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+Experienced Representative with a demonstrated history of working in the information technology and services industry. Skilled in Linux System Administration, Windows Server, Network Administration, Network Security Monitoring, and Incident Response. Strong operations professional with a Bachelor's degree focused in Cyber Security from Tulane University. 
 
-## Our Standards
+## Experience
 
-Examples of behavior that contributes to creating a positive environment include:
+### Cybersecurity Analyst
+
+Experienced Representative with a demonstrated history of working in the information technology and services industry. Skilled in Linux System Administration, Windows Server, Network Administration, Network Security Monitoring, and Incident Response. Strong operations professional with a Bachelor's degree focused in Cyber Security from Tulane University. 
 
 * Using welcoming and inclusive language
 * Being respectful of differing viewpoints and experiences
