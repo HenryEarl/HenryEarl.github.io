@@ -2,3 +2,13 @@
 ---
 
 @import 'jekyll-theme-hacker';
+
+/* Style Rule for Splash Page and Links page*/
+
+nav.horizontalNAV li {
+	list-style: none;
+	float: left;
+	padding: 15px 0px;
+	width: 15%;
+	text-align: center;
+}
