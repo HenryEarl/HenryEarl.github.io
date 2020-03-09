@@ -2,14 +2,14 @@
 title: About Me
 ---
 
-## Henry Earl
+# Henry Earl
 
 ###### Who am I:
 
 Experienced Representative with a demonstrated history of working in the information technology and services industry. Skilled in Linux System Administration, Windows Server, Network Administration, Network Security Monitoring, and Incident Response. Strong operations professional with a Bachelor's degree focused in Cyber Security from Tulane University.
 
 
-# Experience
+## Experience
 
 ### GlobeNet LLC
 ###### Cybersecurity Analyst
@@ -54,7 +54,7 @@ Diving operations including but not limited to: Pipeline construction, Riser con
 Diving operations including but not limited to: Pipeline construction, Riser construction, platform inspections, and all areas of platform demolition and salvage. Writing JSA’s, conducting safety meetings, and utilizing stop work authority to promote safe operations. Pre dive check lists of all diving and PPE equipment. Writing incident reports and root cause analysis.
 
 
-# Education
+## Education
 
 ### Tulane University
 ###### Bachelor's Applied Computing - Cyber Security
@@ -73,8 +73,7 @@ Diving operations including but not limited to: Pipeline construction, Riser con
 ###### High School Diploma
 ###### 2006
 
-# Certifications
-
+## Certifications
 
 ### CompTIA 
 * Network +
@@ -83,8 +82,7 @@ Diving operations including but not limited to: Pipeline construction, Riser con
 * iOS-19A: ACiT 2019 iOS Service Certification Exam
 * SVC-19A: Apple Service Fundamentals Exam
 
-# Activities and Societies: 
+## Activities and Societies: 
 
 * LACIES
 * CCDC
-
