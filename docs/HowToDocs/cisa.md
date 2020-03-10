@@ -3,7 +3,7 @@ title: CISA
 ---
 
 # Cybersecurity and Infrastructure Security Agency (CISA)
-
+[CISA-RVA Tools](./tools).
 ## These are really rough notes.. fyi
 
 ## NMAP
@@ -22,6 +22,14 @@ show options
 Suggest post exploitation paths
 ```
 run post/multi/recon/local_exploit_suggester
+```
+Get Administrator
+```
+getsystem
+```
+Drop into a command prompt
+```
+shell
 ```
 
 Creates relay from a meterpreter session
