@@ -24,6 +24,11 @@ show options
 run post/multi/recon/local_exploit_suggester
 ```
 
+###### Creates relay from a meterpreter session
+```
+portfwd add -l 22 -p 22 -r 10.20.170.87
+```
+
 ###### Systeminfo
 Check the system and current process that the session is running as. I had an issue where the exploit gave me a x86 (WOW64 32 bit) shell and the privesc needed x64 (64bit).
 ^ This statement might be completely false lol ^
@@ -31,7 +36,7 @@ Check the system and current process that the session is running as. I had an is
 sysinfo
 ```
 
-###### I am not sure if this migrated me to a (x86) process. 
+###### I am not sure if this migrated me to a (x86) process.
 ```
 run post/windows/manage/migrate
 ```
