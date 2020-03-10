@@ -19,12 +19,12 @@ show options
 ```
 
 ## Meterpreter
-###### Suggest post exploitation paths
+Suggest post exploitation paths
 ```
 run post/multi/recon/local_exploit_suggester
 ```
 
-###### Creates relay from a meterpreter session
+Creates relay from a meterpreter session
 ```
 portfwd add -l 22 -p 22 -r 10.20.170.87
 ```
