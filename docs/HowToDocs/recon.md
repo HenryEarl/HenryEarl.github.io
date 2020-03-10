@@ -29,7 +29,7 @@ start Veil Framework navigate to the /Veil Framwork directory.
 ```
 ./Veil.py
 ```
-
+Run the ``` list ``` command to show Available Tools.
 
 ## Listeners
 ### Cobalt Strike
