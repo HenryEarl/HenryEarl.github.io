@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="/assets/css/style.css?v=0e83dbe108fd69087a089682477f471e2e428932">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Welcome to another page | Henry Earl</title>
+<title>CISA | Henry Earl</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Welcome to another page" />
+<meta property="og:title" content="CISA" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Henry Earl’s InfoSec Repo" />
 <meta property="og:description" content="Henry Earl’s InfoSec Repo" />
-<link rel="canonical" href="http://localhost:4000/another-page.html" />
-<meta property="og:url" content="http://localhost:4000/another-page.html" />
+<link rel="canonical" href="http://localhost:4000/docs/HowToDocs/cisa.html" />
+<meta property="og:url" content="http://localhost:4000/docs/HowToDocs/cisa.html" />
 <meta property="og:site_name" content="Henry Earl" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Welcome to another page","url":"http://localhost:4000/another-page.html","description":"Henry Earl’s InfoSec Repo","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"CISA","url":"http://localhost:4000/docs/HowToDocs/cisa.html","description":"Henry Earl’s InfoSec Repo","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -49,11 +49,22 @@
 
     <div class="container">
       <section id="main_content">
-        <h2 id="welcome-to-another-page">Welcome to another page</h2>
+        <h1 id="cybersecurity-and-infrastructure-security-agency-cisa">Cybersecurity and Infrastructure Security Agency (CISA)</h1>
 
-<p><em>yay</em></p>
+<h2 id="these-are-really-rough-notes-fyi">These are really rough notes.. fyi</h2>
 
-<p><a href="./">back</a></p>
+<h2 id="nmap">NMAP</h2>
+<h6 id="ping-sweep">Ping Sweep</h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -n -sn &lt;x.x.x.x/xx or x.x.x.x-xxx&gt; -oG - | awk '/Up$/{print $2}'
+</code></pre></div></div>
+
+<h2 id="meterpreter">Meterpreter</h2>
+<h6 id="suggest-post-exploitation-paths">Suggest post exploitation paths</h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>run post/multi/recon/local_exploit_suggester
+</code></pre></div></div>
+<h6 id="i-am-not-sure-if-this-migrated-me-to-a-x86-process">I am not sure if this migrated me to a (x86) process.</h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>run post/windows/manage/migrate
+</code></pre></div></div>
 
       </section>
     </div>
