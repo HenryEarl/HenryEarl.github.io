@@ -100,4 +100,4 @@ http://site/name.php?henryearl=1'
 http://site/name.php?henryearl=-1
 http://site/name.php?henryearl=-1'
 ```
-[Thanks to Database Tutorials] (https://www.youtube.com/watch?v=oWHKIiRGjtQ)
+[Thanks to Database Tutorials](https://www.youtube.com/watch?v=oWHKIiRGjtQ)
