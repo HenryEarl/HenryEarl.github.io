@@ -9,6 +9,11 @@ show options for the payload.
 show targets
 show options
 ```
+A common module is the ‘exploit/multi/handler’ module which is used to handle payloads. For example, if you launch an exploit outside of Metasploit, this module can be used to set up a payload that listens for and handles incoming reverse TCP connections on the specified port and host.
+```
+use exploit/multi/handler
+```
+###### Particularly when you are located on a different subnet, you may not be able to access all of the targets included in the customer scope. Once you compromise hosts that may have routes to other targets, you can utilize the Metasploit ‘route’ command in conjunction with a SOCKS4 proxy to route traffic through open sessions (i.e. from your phishing campaign or other exploitation).
 
 ## Meterpreter
 Suggest post exploitation paths
