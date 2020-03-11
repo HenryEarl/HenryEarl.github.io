@@ -12,16 +12,15 @@ PowerSploit is a collection of post-exploitation Powershell tools with various c
 # Specific Cmdlet Tools
 The cmdlets within PowerSploit have an incredible amount of capabilities which can be researched and explored in a couple of different ways:
 
- Viewing the PowerSploit github: https://github.com/PowerShellMafia/PowerSploit
+ 1. Viewing the PowerSploit github: https://github.com/PowerShellMafia/PowerSploit
+ 1. Viewing documentation online: https://powersploit.readthedocs.io/en/latest/
+ 1. Viewing the actual source scripts and reading through the comments
+ 1. Viewing cheatsheets such as: https://github.com/HarmJ0y/CheatSheets
 
- Viewing documentation online: https://powersploit.readthedocs.io/en/latest/
-
- Viewing the actual source scripts and reading through the comments
-
- Viewing cheatsheets such as: https://github.com/HarmJ0y/CheatSheets
 The commands listed below are some of the most commonly used commands on HVA and RVA engagements, however you are encouraged to do your own research and determine other commands that might be most useful in the Capstone.
+
 Note: if running these commands via Cobaltstrike, all of these must be proceeded by "powershell" or "powerpick" (unmanaged Powershell).
-3.1 PowerUp
+### PowerUp
 Invoke-AllChecks
 • This runs all possible checks in PowerUp
 • Useful way to just quickly go through the checks and determine any easy escalation paths
@@ -29,7 +28,7 @@ Get-GPPPassword
 • Retrieves any group policy passwords that are discovered
 Get-GPPAutologon
 • Retrieves any group policy auto-logon creds
-3.2 PowerView
+### PowerView
 Find-LocalAdminAccess
 • Finds all local administrator access for the current user for all computers on the domain
 • Often takes a long time to run and return complete results, so leave it running
