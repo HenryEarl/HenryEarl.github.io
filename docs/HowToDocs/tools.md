@@ -33,6 +33,12 @@ This information can be cleaned up a little with this.
 ```
 cat output_nmap.txt | grep ^[0-9] | cat output_nmap.txt |  cut -d '/' -f 1 |  tr '\n' ',' | sed s/,$//
 ```
+##### My Favorite Nmap Scan
+Thanks [IppSec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)
+```
+nmap -sC -sV -oA nmap/init "ip address"
+```
+
 ### SimplyEmail
 ### theHarvester
 To run theHarverster. 
