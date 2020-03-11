@@ -14,7 +14,16 @@ Browse to the https://<nessus host>:8834
 Create a new Advanced Scan
 * Turn off ping
 * Enable generic web application tests
+
 ### NMAP
+Run an Nmap scan for all tcp ports
+```
+nmap -p- --min-rate=1000 -T4 10.10.10.119 > output_nmap.txt
+```
+This information can be cleaned up a little with this. 
+```
+cat output_nmap.txt | grep ^[0-9] | cat output_nmap.txt |  cut -d '/' -f 1 |  tr '\n' ',' | sed s/,$//
+```
 ### SimplyEmail
 ### theHarvester
 
@@ -67,7 +76,7 @@ sendEmail -o tls=no -t target@corp.com -f hacker@foo.bar -s
 ### Egress-Assess
 
 ## Enumeration
-PowerSploit
+### PowerSploit
 
 ## Directory Brute Force
 ### Aquatone
