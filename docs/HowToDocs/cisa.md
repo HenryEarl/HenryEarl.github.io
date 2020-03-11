@@ -16,7 +16,7 @@ title: CISA
 1. External Roles
 1. Reporting Needs
 
-**Stay in Scope**
+##### **Stay in Scope**
 
 ## Follow the RunBook
 
@@ -41,7 +41,7 @@ title: CISA
  	- MultiRelay from the Responder results.
  - Data Exfiltration
 
- ###### ** Look for SAM dumps and SYSTEM dumps**
+ ###### **Look for SAM dumps and SYSTEM dumps**
 
 ### A few Attack Paths
 
