@@ -58,6 +58,10 @@ Background the meterpreter session
 ```
 background
 ```
+Bring that meterpreter session to the foreground. Trick here is hitting tab to see available sessions. 
+```
+session -i "session id"
+```
 
 Meterpreter Scripts
 ```

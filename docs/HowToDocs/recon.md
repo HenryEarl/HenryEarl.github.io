@@ -16,6 +16,15 @@ Create a new Advanced Scan
 * Enable generic web application tests
 
 ### NMAP
+###### Ping Sweep
+```
+nmap -n -sn <x.x.x.x/xx or x.x.x.x-xxx> -oG - | awk '/Up$/{print $2}'
+```
+Take this ping sweep over to a targeted scan. You can replace the "--top-ports" with "-p-" or a list of desired ports. 
+```
+nmap --top-ports -sC -sV -oA nmap/targeted --script vuln "ipaddress from port scan"
+```
+###### Deeper Scanning
 Run an Nmap scan for all tcp ports
 ```
 nmap -p- --min-rate=1000 -T4 "ip address here" > output_nmap.txt
