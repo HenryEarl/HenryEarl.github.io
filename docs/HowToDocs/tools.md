@@ -94,7 +94,7 @@ sendEmail -o tls=no -t target@corp.com -f hacker@foo.bar -s
 # Enumeration
 ### PowerSploit
 
-# Directory Brute Force
+# Visual Inspection
 ### Aquatone
 ### EyeWitness
 
