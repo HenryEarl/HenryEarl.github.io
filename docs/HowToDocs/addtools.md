@@ -1,8 +1,6 @@
 ---
 layout: ADDITIONAL TOOLS AND TECHNIQUES
 ---
-
-
 # Cobalt Strike
 While Cobalt Strike is permitted to be used for the Capstone, we do not offer specific training on the tool as the Capstone is meant to be a tool agnostic exercise and the complexity of the tool exceeds the scope of CQI training. If you wish to utilize Cobalt Strike in the Capstone, you are expected to rely on your own experience and the extensive training resources available online (i.e. https://blog.cobaltstrike.com/ and https://www.cobaltstrike.com/).
 
