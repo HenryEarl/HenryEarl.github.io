@@ -80,6 +80,20 @@ Now you can Generate the payload.
 ### Cobalt Strike
 ### Metasploit
 ### netcat
+Set up listening connection on port 4444
+```
+nc -nlvp 4444
+```
+
+Connect to remote machine on port 4444
+```
+nc -nv 10.0.0.2 4444
+```
+
+Setup listening connection and redirect incoming input into an exe
+```
+nc -nlvp 4444 > incoming.exe
+```
 
 # Email Client
 ### Cobalt Strike
