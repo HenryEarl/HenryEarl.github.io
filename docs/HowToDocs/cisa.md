@@ -21,26 +21,26 @@ title: CISA
 ## Follow the RunBook
 
 ### External Pentest
- - Phishing
- - Recon
- - Web Application Testing (Refer to the Web Application Testing Section in the RUNBOOK)
-  	- Vulnerability Scanning
- 	- Directory Discovery - Dirbuster /usr/share/wordlists/dirbuster/directory/directory-list-2.3-medium.txt (I think that is it?)
-	- Exploitation - Look for webshells in the **/usr/share/webshells**
- - Penetration Testing (Refer to the Penetration Testing Section in the RUNBOOK)
+- Phishing
+- Recon
+- Web Application Testing (Refer to the Web Application Testing Section in the RUNBOOK)
+  - Vulnerability Scanning
+  - Directory Discovery - Dirbuster /usr/share/wordlists/dirbuster/directory/directory-list-2.3-medium.txt (I think that is it?)
+  - Exploitation - Look for webshells in the **/usr/share/webshells**
+- Penetration Testing (Refer to the Penetration Testing Section in the RUNBOOK)
 
 ###### **Keep an Eye out for SMB and FTP services**
 
 ### Internal Pentest
- - High Value Assets
- - Web Application Testing (Refer to the Web Application Testing Section in the RUNBOOK)
- 	- Vulnerability Scanning
- 	- Directory Discovery - Dirbuster /usr/share/wordlists/dirbuster/directory/directory-list-2.3-medium.txt (I think that is it?)
- 	- Exploitation - Look for webshells in the **/usr/share/webshells**
- - Penetration Testing (Refer to the Penetration Testing Section in the RUNBOOK)
- 	- Run Responder ASAP and look to use the captured hashes with MultiRelay.
- 	- MultiRelay from the Responder results.
- - Data Exfiltration
+- High Value Assets
+- Web Application Testing (Refer to the Web Application Testing Section in the RUNBOOK)
+  - Vulnerability Scanning
+  - Directory Discovery - Dirbuster /usr/share/wordlists/dirbuster/directory/directory-list-2.3-medium.txt (I think that is it?)
+  - Exploitation - Look for webshells in the **/usr/share/webshells**
+- Penetration Testing (Refer to the Penetration Testing Section in the RUNBOOK)
+  - Run Responder ASAP and look to use the captured hashes with MultiRelay.
+  - MultiRelay from the Responder results.
+- Data Exfiltration
 
 ###### **Look for SAM dumps and SYSTEM dumps**
 
