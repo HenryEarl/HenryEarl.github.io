@@ -35,6 +35,18 @@ cat output_nmap.txt | grep ^[0-9] | cat output_nmap.txt |  cut -d '/' -f 1 |  tr
 ```
 ### SimplyEmail
 ### theHarvester
+To run theHarverster. 
+```
+theHarverster
+```
+Show options:
+```
+theHarverster options
+```
+theharvester Usage Example
+```
+theharvester -d kali.org -l 500 -b google
+```
 
 ## Web Application Reconnaissance
 ### Vega
