@@ -15,13 +15,13 @@ title: CISA
 
 ## Follow the RunBook
 
-- External Pentest
+### External Pentest
  - Phishing
  - Recon
  - Web Application Testing
  - Penetration Testing
 
-- Internal Pentest
+### Internal Pentest
  - High Value Assets
  - Web Application Testing
  - Penetration Testing
