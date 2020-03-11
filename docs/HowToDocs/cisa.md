@@ -7,7 +7,7 @@ title: CISA
 
 [Metasploit Primer](./metasploit.md)
 
-[Additional Tools and Tchniques](./additional-tools.md)
+[Additional Tools and Techniques](./additional-tools.md)
 ## Methodology 
 
 
