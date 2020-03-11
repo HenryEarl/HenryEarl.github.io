@@ -10,10 +10,10 @@ PowerSploit is a collection of post-exploitation Powershell tools with various c
 # Specific Cmdlet Tools
 The cmdlets within PowerSploit have an incredible amount of capabilities which can be researched and explored in a couple of different ways:
 
- 1. Viewing the PowerSploit github: https://github.com/PowerShellMafia/PowerSploit
- 1. Viewing documentation online: https://powersploit.readthedocs.io/en/latest/
+ 1. Viewing the PowerSploit github: (https://github.com/PowerShellMafia/PowerSploit)
+ 1. Viewing documentation online: (https://powersploit.readthedocs.io/en/latest/)
  1. Viewing the actual source scripts and reading through the comments
- 1. Viewing cheatsheets such as: https://github.com/HarmJ0y/CheatSheets
+ 1. Viewing cheatsheets such as: (https://github.com/HarmJ0y/CheatSheets)
 
 The commands listed below are some of the most commonly used commands on HVA and RVA engagements, however you are encouraged to do your own research and determine other commands that might be most useful in the Capstone.
 
