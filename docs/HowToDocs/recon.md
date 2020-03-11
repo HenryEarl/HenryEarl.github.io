@@ -18,7 +18,7 @@ Create a new Advanced Scan
 ### NMAP
 Run an Nmap scan for all tcp ports
 ```
-nmap -p- --min-rate=1000 -T4 10.10.10.119 > output_nmap.txt
+nmap -p- --min-rate=1000 -T4 "ip address here" > output_nmap.txt
 ```
 This information can be cleaned up a little with this. 
 ```
