@@ -13,7 +13,29 @@ A common module is the ‘exploit/multi/handler’ module which is used to handl
 ```
 use exploit/multi/handler
 ```
-###### Particularly when you are located on a different subnet, you may not be able to access all of the targets included in the customer scope. Once you compromise hosts that may have routes to other targets, you can utilize the Metasploit ‘route’ command in conjunction with a SOCKS4 proxy to route traffic through open sessions (i.e. from your phishing campaign or other exploitation).
+Particularly when you are located on a different subnet, you may not be able to access all of the targets included in the customer scope. Once you compromise hosts that may have routes to other targets, you can utilize the Metasploit ‘route’ command in conjunction with a SOCKS4 proxy to route traffic through open sessions (i.e. from your phishing campaign or other exploitation).
+
+```
+route add "destination ip" "subnet" "session ?"
+```
+```
+use auxiliary/server/socs4a
+```
+Set the srvhost:
+```
+set srvhost "local for most cases"
+```
+Set the srvport:
+```
+set srvport "port"
+```
+Now you can start the proxy server. 
+```
+run
+```
+Once you have set up the route and proxy server in Metasploit, you can use proxychains or modify your connection settings in your browser for SOCKS4 proxy configuration: Use the GUI network configuration guide to setup a SOCKS local host listener on your configured port. Double Check for Socks 4.
+
+I think the portfwd command that creates a relay from the local host to the destination host will work for certain situations. 
 
 ## Meterpreter
 Suggest post exploitation paths
@@ -41,7 +63,7 @@ Check the system and current process that the session is running as. I had an is
 sysinfo
 ```
 
-###### I am not sure if this migrated me to a (x86) process.
+###### I am not sure if this migrated me to a (x86) process. Always check with sysinfo. 
 ```
 run post/windows/manage/migrate
 ```

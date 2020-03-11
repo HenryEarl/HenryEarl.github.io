@@ -8,11 +8,12 @@ title: CISA
 [Metasploit Primer](./metasploit.md)
 ## Methodology 
 
+
 1. Assign Roles
 1. Internal Roles
 1. External Roles
 1. Reporting Needs
-
+1. ** Stay in Scope**
 ## Follow the RunBook
 
 ### External Pentest
@@ -32,11 +33,11 @@ title: CISA
  	- Directory Discovery - Dirbuster /usr/share/wordlists/dirbuster/directory/directory-list-2.3-medium.txt (I think that is it?)
  	- Exploitation - Look for webshells in the **/usr/share/webshells**
  - Penetration Testing (Refer to the Penetration Testing Section in the RUNBOOK)
+ 	- Run Responder ASAP and look to use the captured hashes with MultiRelay.
+
  - Data Exfiltration 
 
 ### A few Attack Paths
-
-##### PWN 1
 
 There is a bad ftp service like Konica Minolta running.
 1. Locate the correct metasploit module. 
