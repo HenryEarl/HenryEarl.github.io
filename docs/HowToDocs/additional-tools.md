@@ -22,23 +22,23 @@ The commands listed below are some of the most commonly used commands on HVA and
 Note: if running these commands via Cobaltstrike, all of these must be proceeded by "powershell" or "powerpick" (unmanaged Powershell).
 ### PowerUp
 Invoke-AllChecks
-• This runs all possible checks in PowerUp
-• Useful way to just quickly go through the checks and determine any easy escalation paths
+-This runs all possible checks in PowerUp
+-Useful way to just quickly go through the checks and determine any easy escalation paths
 Get-GPPPassword
-• Retrieves any group policy passwords that are discovered
+-Retrieves any group policy passwords that are discovered
 Get-GPPAutologon
-• Retrieves any group policy auto-logon creds
+-Retrieves any group policy auto-logon creds
 ### PowerView
 Find-LocalAdminAccess
-• Finds all local administrator access for the current user for all computers on the domain
-• Often takes a long time to run and return complete results, so leave it running
+-Finds all local administrator access for the current user for all computers on the domain
+-Often takes a long time to run and return complete results, so leave it running
 FindLastLogonLocation
-• Search for the last logon location for a specific user on the current domain
+-Search for the last logon location for a specific user on the current domain
 Invoke-ShareFinder
-• Searches for network share drive access on the current domain
+-Searches for network share drive access on the current domain
 Get-NetUser - UserName [username]
 Get-NetGroup -UserName [username]
-• Searches for what group the specified user is a member of
+-Searches for what group the specified user is a member of
 Get-DomainTrust
 Get-ForestTrust
-• Search for trust relationships
+-Search for trust relationships
