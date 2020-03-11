@@ -15,7 +15,9 @@ title: CISA
 1. Internal Roles
 1. External Roles
 1. Reporting Needs
-1. ** Stay in Scope**
+
+** Stay in Scope**
+
 ## Follow the RunBook
 
 ### External Pentest
