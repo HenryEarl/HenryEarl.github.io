@@ -3,17 +3,6 @@ title: CISA Tools
 ---
 # List of Tools for CISA
 ## Network Reconnaissance
-### Nessus
-Start Nessus
-```
-service nessusd start
-```
-Browse to the https://<nessus host>:8834
-* Username: root
-* Password: toor
-Create a new Advanced Scan
-* Turn off ping
-* Enable generic web application tests
 
 ### NMAP
 ###### Ping Sweep
@@ -38,6 +27,17 @@ Thanks [IppSec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)
 ```
 nmap -sC -sV -oA nmap/init "ip address"
 ```
+### Nessus
+Start Nessus
+```
+service nessusd start
+```
+Browse to the https://<nessus host>:8834
+* Username: root
+* Password: toor
+Create a new Advanced Scan
+* Turn off ping
+* Enable generic web application tests.
 
 ### SimplyEmail
 ### theHarvester

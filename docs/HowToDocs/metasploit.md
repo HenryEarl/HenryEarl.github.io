@@ -4,6 +4,7 @@ title: Metasploit
 
 ## Metasploit
 ###### Commands
+show options for the payload. 
 ```
 show targets
 show options
