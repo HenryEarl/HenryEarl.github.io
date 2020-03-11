@@ -6,6 +6,8 @@ title: CISA
 [Tools for CISA-RVA](./tools)
 
 [Metasploit Primer](./metasploit.md)
+
+[Additional Tools and Tchniques](./additional-tools.md)
 ## Methodology 
 
 
@@ -32,12 +34,14 @@ title: CISA
  - Web Application Testing (Refer to the Web Application Testing Section in the RUNBOOK)
  	- Vulnerability Scanning
  	- Directory Discovery - Dirbuster /usr/share/wordlists/dirbuster/directory/directory-list-2.3-medium.txt (I think that is it?)
- 	
+
  	- Exploitation - Look for webshells in the **/usr/share/webshells**
  - Penetration Testing (Refer to the Penetration Testing Section in the RUNBOOK)
  	- Run Responder ASAP and look to use the captured hashes with MultiRelay.
  	- MultiRelay from the Responder results.
- - Data Exfiltration 
+ - Data Exfiltration
+
+ ###### ** Look for SAM dumps and SYSTEM dumps**
 
 ### A few Attack Paths
 

