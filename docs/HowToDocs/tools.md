@@ -159,3 +159,7 @@ pth-winexe -u administrator%"hash"//"target ip" cmd.exe
 ## Data Exfiltration
 ### Egress-Assess
 In order to fulfill the data exfiltration service of an assessment, a tool called Egress-Assess is used. On the designated Egress-Assess server (the external Egress-Assess Kali machine) navigate to ~/Tools/Egress-Assess and run ‘Egress-Assess.py --server <protocol>’ (for ftp and smtp protocols, specify a --username and --password that the client can use to connect and be sure to indicate those on the client as well).
+
+Once your server is set up, use the Egress-Assess client (the internal Egress-Assess Kali machine) and navigate to the ~/Tools/Egress-Assess directory. Run the following command: ‘./Egress-Assess.py --client <protocol> --ip <server ip address> --datatype ssn –data-size 15’.
+
+Repeat this process for each of the protocols (http, https, ftp, icmp, smb, dns, smtp) and use the server output to determine if the data exfiltration was blocked or not. Use a smaller data size for DNS and ICMP protocols since they utilize a lot of packets. Include the results in your report.
