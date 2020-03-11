@@ -31,7 +31,7 @@ Start Nessus
 ```
 service nessusd start
 ```
-Browse to the https://<nessus host>:8834
+Browse to the https://"nessus host":8834
 * Username: root
 * Password: toor
 Create a new Advanced Scan
