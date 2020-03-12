@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=6078930006c3c674839d81302710732ce523e3ba">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>CISA | Henry Earl</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="CISA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Henry Earl’s InfoSec Repo" />
+<meta property="og:description" content="Henry Earl’s InfoSec Repo" />
+<link rel="canonical" href="http://localhost:4000/docs/HowToDocs/CISA/cisa.html" />
+<meta property="og:url" content="http://localhost:4000/docs/HowToDocs/CISA/cisa.html" />
+<meta property="og:site_name" content="Henry Earl" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"CISA","url":"http://localhost:4000/docs/HowToDocs/CISA/cisa.html","description":"Henry Earl’s InfoSec Repo","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Henry Earl</h1>
+        </a>
+        <h2>Henry Earl's InfoSec Repo</h2>
+
+        <section id="downloads">
+          
+          <nav class="horizontalNAV">
+            <a href="/docs/aboutme" class="btn">About Me</a>
+            <a href="/docs/HowToDocs/" class="btn">HowToDocs</a>
+            <a href="https://www.youtube.com/channel/UCsmRRdk_D0C1f5Dt4n-8kJw?view_as=subscriber" class="btn">YouTube</a>
+            <a href="https://twitter.com/AoXHenryEarl" class="btn">Twitter</a>
+            <a href="https://www.twitch.tv/1amhenryearl" class="btn">Twitch</a>
+          
+          <a href="https://github.com/HenryEarl/HenryEarl.github.io" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </nav>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="cybersecurity-and-infrastructure-security-agency-cisa">Cybersecurity and Infrastructure Security Agency (CISA)</h1>
+<p><a href="./tools">Tools for CISA-RVA</a></p>
+
+<p><a href="/docs/HowToDocs/CISA/metasploit.html">Metasploit Primer</a></p>
+
+<p><a href="/docs/HowToDocs/CISA/addtools.html">Additional Tools and Techniques - Formatting Broken</a></p>
+<h2 id="methodology">Methodology</h2>
+
+<ol>
+  <li>Assign Roles</li>
+  <li>Internal Roles</li>
+  <li>External Roles</li>
+  <li>Reporting Needs</li>
+</ol>
+
+<h5 id="stay-in-scope"><strong>Stay in Scope</strong></h5>
+
+<h2 id="follow-the-runbook">Follow the RunBook</h2>
+
+<h3 id="external-pentest">External Pentest</h3>
+<ul>
+  <li>Phishing</li>
+  <li>Recon</li>
+  <li>Web Application Testing (Refer to the Web Application Testing Section in the RUNBOOK)
+    <ul>
+      <li>Vulnerability Scanning</li>
+      <li>Directory Discovery - Dirbuster /usr/share/wordlists/dirbuster/directory/directory-list-2.3-medium.txt (I think that is it?)</li>
+      <li>Exploitation - Look for webshells in the <strong>/usr/share/webshells</strong></li>
+    </ul>
+  </li>
+  <li>Penetration Testing (Refer to the Penetration Testing Section in the RUNBOOK)</li>
+</ul>
+
+<h6 id="keep-an-eye-out-for-smb-and-ftp-services"><strong>Keep an Eye out for SMB and FTP services</strong></h6>
+
+<h3 id="internal-pentest">Internal Pentest</h3>
+<ul>
+  <li>High Value Assets</li>
+  <li>Web Application Testing (Refer to the Web Application Testing Section in the RUNBOOK)
+    <ul>
+      <li>Vulnerability Scanning</li>
+      <li>Directory Discovery - Dirbuster /usr/share/wordlists/dirbuster/directory/directory-list-2.3-medium.txt (I think that is it?)</li>
+      <li>Exploitation - Look for webshells in the <strong>/usr/share/webshells</strong></li>
+    </ul>
+  </li>
+  <li>Penetration Testing (Refer to the Penetration Testing Section in the RUNBOOK)
+    <ul>
+      <li>Run Responder ASAP and look to use the captured hashes with MultiRelay.</li>
+      <li>MultiRelay from the Responder results.</li>
+    </ul>
+  </li>
+  <li>Data Exfiltration</li>
+</ul>
+
+<h6 id="look-for-sam-dumps-and-system-dumps"><strong>Look for SAM dumps and SYSTEM dumps</strong></h6>
+
+<h3 id="a-few-attack-paths">A few Attack Paths</h3>
+
+<p>There is a bad ftp service like Konica Minolta running.</p>
+<ol>
+  <li>Locate the correct metasploit module.</li>
+  <li>Get the local.txt from the Desktop.</li>
+  <li>There is a file that has plan text information that will help with the <strong>Pivot</strong>.</li>
+  <li>Create a proxy from the Metrepreter session.</li>
+  <li>use the credentials to get around and get the proof.txt.</li>
+</ol>
+
+<p>Bad Blue Server that is running as a standard user. The service is exploitable by Metasploit.</p>
+<ol>
+  <li>Locate the correct Module</li>
+  <li>Use “getsystem” with the meterpreter session.. if this fails try to migrate the process</li>
+  <li>Use the “hashdump” to dump the hashes.</li>
+  <li>use a tool like pth-winexe to pass the hash.</li>
+</ol>
+
+<p>Look for a JBoss Service running on the network.</p>
+<ol>
+  <li>Locate the correct metasploit module.</li>
+  <li>Run the JBoss Exploit. HINT you might have to change the Architecture of the exploit “show target”</li>
+  <li>PWN</li>
+</ol>
+
+<h2 id="post-assessment-notes">Post Assessment Notes</h2>
+
+<p>Overall the assessment went well. The external pentest was a nice learning curve for us. Having to deal with firewall and network address translation. We ran into issues dealing with suspected web application firewalls and default Metasploit ports being blocked. We really could have taken more of the low hangning fruit in some cases. However, overall the team really did a great job working together and trying to own systems. Below is a list of a few things that we need to work on.</p>
+
+<ul>
+  <li>Tools that need to be studied more.
+    <ul>
+      <li>Responder</li>
+      <li>Nmap (Mapping a Network and Scripts)</li>
+      <li>sqlmap</li>
+      <li>Burp</li>
+    </ul>
+  </li>
+  <li>Operational
+    <ul>
+      <li>Develop a more refined methodology including:
+        <ul>
+          <li>Create a detailed game plan.</li>
+          <li>Ensure team members have everything to succeed.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+      </section>
+    </div>
+
+    
+  </body>
+</html>

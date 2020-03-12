@@ -64,3 +64,17 @@ Look for a JBoss Service running on the network.
 1. Run the JBoss Exploit. HINT you might have to change the Architecture of the exploit "show target"
 1. PWN
 
+## Post Assessment Notes
+
+Overall the assessment went well. The external pentest was a nice learning curve for us. Having to deal with firewall and network address translation. We ran into issues dealing with suspected web application firewalls and default Metasploit ports being blocked. We really could have taken more of the low hangning fruit in some cases. However, overall the team really did a great job working together and trying to own systems. Below is a list of a few things that we need to work on. 
+
+- Tools that need to be studied more. 
+  - Responder
+  - Nmap (Mapping a Network and Scripts)
+  - sqlmap
+  - Burp
+
+- Operational
+  - Develop a more refined methodology including:
+    - Create a detailed game plan.
+    - Ensure team members have everything to succeed.

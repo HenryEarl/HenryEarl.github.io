@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=6078930006c3c674839d81302710732ce523e3ba">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Additional Tools | Henry Earl</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Additional Tools" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Henry Earl’s InfoSec Repo" />
+<meta property="og:description" content="Henry Earl’s InfoSec Repo" />
+<link rel="canonical" href="http://localhost:4000/docs/HowToDocs/CISA/addtools.html" />
+<meta property="og:url" content="http://localhost:4000/docs/HowToDocs/CISA/addtools.html" />
+<meta property="og:site_name" content="Henry Earl" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Additional Tools","url":"http://localhost:4000/docs/HowToDocs/CISA/addtools.html","description":"Henry Earl’s InfoSec Repo","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Henry Earl</h1>
+        </a>
+        <h2>Henry Earl's InfoSec Repo</h2>
+
+        <section id="downloads">
+          
+          <nav class="horizontalNAV">
+            <a href="/docs/aboutme" class="btn">About Me</a>
+            <a href="/docs/HowToDocs/" class="btn">HowToDocs</a>
+            <a href="https://www.youtube.com/channel/UCsmRRdk_D0C1f5Dt4n-8kJw?view_as=subscriber" class="btn">YouTube</a>
+            <a href="https://twitter.com/AoXHenryEarl" class="btn">Twitter</a>
+            <a href="https://www.twitch.tv/1amhenryearl" class="btn">Twitch</a>
+          
+          <a href="https://github.com/HenryEarl/HenryEarl.github.io" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </nav>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="cobalt-strike">Cobalt Strike</h1>
+<p>While Cobalt Strike is permitted to be used for the Capstone, we do not offer specific training on the tool as the Capstone is meant to be a tool agnostic exercise and the complexity of the tool exceeds the scope of CQI training. If you wish to utilize Cobalt Strike in the Capstone, you are expected to rely on your own experience and the extensive training resources <a href="https://blog.cobaltstrike.com/">available online</a><a href="https://www.cobaltstrike.com/">and</a>.</p>
+
+<h1 id="powersploit-techniques">PowerSploit Techniques</h1>
+<p>PowerSploit is a collection of post-exploitation Powershell tools with various capabilities including exfiltration, persistence, privilege escalation, reconnaissance, and more. The assessment team typically employs these tools through loading them into Cobalt Strike beacons.</p>
+
+<h1 id="specific-cmdlet-tools">Specific Cmdlet Tools</h1>
+<p>The cmdlets within PowerSploit have an incredible amount of capabilities which can be researched and explored in a couple of different ways:</p>
+
+<ol>
+  <li><a href="https://github.com/PowerShellMafia/PowerSploit">Viewing the PowerSploit github:</a></li>
+  <li><a href="https://powersploit.readthedocs.io/en/latest/">Viewing documentation online:</a></li>
+  <li>Viewing the actual source scripts and reading through the comments</li>
+  <li><a href="https://github.com/HarmJ0y/CheatSheets">Viewing cheatsheets such as:</a></li>
+</ol>
+
+<p>The commands listed below are some of the most commonly used commands on HVA and RVA engagements, however you are encouraged to do your own research and determine other commands that might be most useful in the Capstone.</p>
+
+<p>Note: if running these commands via Cobaltstrike, all of these must be proceeded by “powershell” or “powerpick” (unmanaged Powershell).</p>
+<h3 id="powerup">PowerUp</h3>
+<p>Invoke-AllChecks
+-This runs all possible checks in PowerUp
+-Useful way to just quickly go through the checks and determine any easy escalation paths
+Get-GPPPassword
+-Retrieves any group policy passwords that are discovered
+Get-GPPAutologon
+-Retrieves any group policy auto-logon creds</p>
+<h3 id="powerview">PowerView</h3>
+<p>Find-LocalAdminAccess
+-Finds all local administrator access for the current user for all computers on the domain
+-Often takes a long time to run and return complete results, so leave it running
+FindLastLogonLocation
+-Search for the last logon location for a specific user on the current domain
+Invoke-ShareFinder
+-Searches for network share drive access on the current domain
+Get-NetUser - UserName [username]
+Get-NetGroup -UserName [username]
+-Searches for what group the specified user is a member of
+Get-DomainTrust
+Get-ForestTrust
+-Search for trust relationships</p>
+
+<h1 id="find-gpp-passwords-in-sysvol">Find GPP Passwords in SYSVOL</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>findstr /S cpassword $env:logonserver\sysvol\*.xml
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>findstr /S cpassword %logonserver%\sysvol\*.xml (cmd.exe)
+</code></pre></div></div>
+
+<h1 id="run-powershell-prompt-as-a-different-user-without-loading-profile-to-the-machine-replace-domain-and-user">Run Powershell prompt as a different user, without loading profile to the machine [replace DOMAIN and USER]</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>runas /user:DOMAIN\USER /noprofile powershell.exe
+</code></pre></div></div>
+<h1 id="insert-reg-key-to-enable-wdigest-on-newer-versions-of-windows">Insert reg key to enable Wdigest on newer versions of Windows</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reg add HKLM\SYSTEM\CurrentControlSet\Contro\SecurityProviders\Wdigest /v UseLogonCredential /t Reg_DWORD /d 1
+</code></pre></div></div>
+
+<h1 id="useful-commands">Useful Commands</h1>
+
+<p>Command Injection</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&amp;&amp;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>||
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>;
+</code></pre></div></div>
+
+      </section>
+    </div>
+
+    
+  </body>
+</html>
