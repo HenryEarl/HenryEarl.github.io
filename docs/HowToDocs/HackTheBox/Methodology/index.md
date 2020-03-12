@@ -4,7 +4,7 @@ title: Methodology
 
 # [Priveledge Escalation](./privesc)
 
-# Recon
+# [Recon](./recon)
 
 # Hack The Box Scripts
 
