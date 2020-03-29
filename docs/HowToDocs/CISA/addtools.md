@@ -3,7 +3,7 @@ title: Additional Tools
 ---
 
 # Cobalt Strike
-While Cobalt Strike is permitted to be used for the Capstone, we do not offer specific training on the tool as the Capstone is meant to be a tool agnostic exercise and the complexity of the tool exceeds the scope of CQI training. If you wish to utilize Cobalt Strike in the Capstone, you are expected to rely on your own experience and the extensive training resources [available online](https://blog.cobaltstrike.com/)[and](https://www.cobaltstrike.com/).
+While Cobalt Strike is permitted to be used for the Capstone, we do not offer specific training on the tool as the Capstone is meant to be a tool agnostic exercise and the complexity of the tool exceeds the scope of CQI training. If you wish to utilize Cobalt Strike in the Capstone, you are expected to rely on your own experience and the extensive training resources [available online](https://blog.cobaltstrike.com/) [and](https://www.cobaltstrike.com/).
 
 # PowerSploit Techniques
 PowerSploit is a collection of post-exploitation Powershell tools with various capabilities including exfiltration, persistence, privilege escalation, reconnaissance, and more. The assessment team typically employs these tools through loading them into Cobalt Strike beacons.
