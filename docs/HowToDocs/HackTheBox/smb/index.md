@@ -2,7 +2,16 @@
 title: Samba and SMB 
 ---
 
-Create a teporary SMB share on Linux
+# Create a teporary SMB share on Linux
+### Use Impacket to create the smb server on linux
 '''
 impacket-smbserver 'DaveKennedy' $(pwd) -smb2support -user "Rel1nk" -password "HackTheBox2020!"
 '''
+### Create Secure Store on Remote Windows Machine (single '' must be used "" are not manditory)
+$pass = ConvertTo-SecureString 'HackTheBox2020!' -AsPlainText -Force
+### test for System.Security.SecureString
+$pass
+$cred = New-Object System.Management.Automation.PSCredential('Rel1nk',$pass)
+### test for Username and secure string
+### Create Mounted Drive in powershell
+New-PSDrive -Name "Public" -PSProvider "FileSystem" -Credential $cred -Root "\\IpAddress\DaveKennedy"
