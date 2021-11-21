@@ -26,5 +26,6 @@ beacon> shell dir \\CFC-Win10-02\C$
 ### References
 Need to have administrator beacon. Troubleshooting article here. 
 https://blog.cobaltstrike.com/2015/12/16/windows-access-tokens-and-alternate-credentials/
+
 Kandy Walkthrough of PTH
 https://www.youtube.com/watch?v=GmrPHD7k7W0&t=424s
