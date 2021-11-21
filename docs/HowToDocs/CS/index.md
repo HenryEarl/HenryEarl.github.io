@@ -3,7 +3,7 @@
 pass-the-hash (PTH) with mimikatz in your AD env by following this:
 https://blog.cobaltstrike.com/2015/05/21/how-to-pass-the-hash-with-mimikatz/
 
-I will use dump the plain text passwords from LSASS to get my domain account hashes. This is because I am going to PTH to another domain computer with a different local user/password. For local user accounts you can use `hashdump`. You can view the captured credentials under View -> Credentials. 
+I will dump creds from LSASS to get my domain account hashes. This is because I am going to PTH to another domain computer with a different local user/password. For local user accounts you can use `hashdump`. You can view the captured credentials under View -> Credentials. 
 ```
 beacon> logonpasswords
 ```
