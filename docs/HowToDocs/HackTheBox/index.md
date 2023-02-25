@@ -2,7 +2,7 @@
 title: Hack The Box
 ---
 
-[Exploitation](./index.md)
+[Exploitation](./Exploitation)
 
 [Methodology](./Methodology)
 
