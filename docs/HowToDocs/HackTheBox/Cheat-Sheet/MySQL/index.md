@@ -35,12 +35,12 @@ title: MySQL
 | `SELECT * FROM logins WHERE username LIKE 'admin%'` | List results where the name is similar to a given string |
 
 ## MySQL Operator Precedence
-* Division (`/`), Multiplication (`*`), and Modulus (`%`)
-* Addition (`+`) and Subtraction (`-`)
-* Comparison (`=`, `>`, `<`, `<=`, `>=`, `!=`, `LIKE`)
-* NOT (`!`)
-* AND (`&&`)
-* OR (`||`)
+>  Division (`/`), Multiplication (`*`), and Modulus (`%`)
+> Addition (`+`) and Subtraction (`-`)
+> Comparison (`=`, `>`, `<`, `<=`, `>=`, `!=`, `LIKE`)
+> NOT (`!`)
+> AND (`&&`)
+> OR (`||`)
 
 ## SQL Injection
 
