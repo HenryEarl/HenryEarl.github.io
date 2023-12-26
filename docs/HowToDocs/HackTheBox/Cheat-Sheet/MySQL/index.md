@@ -1,7 +1,6 @@
 ---
 title: MySQL
 ---
-${toc}
 
 ## MySQL
 
