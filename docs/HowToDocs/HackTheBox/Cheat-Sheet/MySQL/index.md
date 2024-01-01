@@ -85,6 +85,8 @@ title: MySQL
 
 ## MySQL Operator Precedence
 
+> Expressions within the parenthesis take precedence over other operators and are evaluated first.
+
 >  Division (`/`), Multiplication (`*`), and Modulus (`%`)
 
 > Addition (`+`) and Subtraction (`-`)
