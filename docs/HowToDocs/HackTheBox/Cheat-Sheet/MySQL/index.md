@@ -41,14 +41,7 @@ title: MySQL
 | --------------|-------------------|
 | `admin' or '1'='1` | Basic Auth Bypass |
 | `admin')-- -` | Basic Auth Bypass With comments |
-| [Auth Bypass Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass) |
-
-| **Command**   | **Description**   |
-| --------------|-------------------|
-| **General** |
-| `mysql -u root -h docker.hackthebox.eu -P 3306 -p` | login to mysql database |
-| `SHOW DATABASES` | List available databases |
-| `USE users` | Switch to database |
+| [Auth Bypass Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass) | | 
 
 
 ### Union Injection
