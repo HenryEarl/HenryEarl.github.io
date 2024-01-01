@@ -54,6 +54,13 @@ title: MySQL
 | `test` | Basic Auth Bypass With comments |
 | [Auth Bypass Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass) | | 
 
+| **Payload**   | **Description**   |
+| --------------|-------------------|
+| **General** |
+| `admin' or '1'='1` | login to mysql database |
+| `admin')-- -` | List available databases |
+| [Auth Bypass Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass) | Switch to database |
+
 
 ### Union Injection
 | **Payload**   | **Description**   |
