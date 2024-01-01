@@ -47,6 +47,9 @@ title: MySQL
 ### Auth Bypass
 | **Payload**   | **Description**   |
 | --------------|-------------------|
+| `mysql -u root -h docker.hackthebox.eu -P 3306 -p` | login to mysql database |
+| `SHOW DATABASES` | List available databases |
+| `USE users` | Switch to database |
 | `test` | Basic Auth Bypass |
 | `test` | Basic Auth Bypass With comments |
 | [Auth Bypass Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass) | | 
