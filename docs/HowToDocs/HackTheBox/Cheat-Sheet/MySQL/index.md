@@ -44,6 +44,14 @@ title: MySQL
 | [Auth Bypass Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass) | | 
 
 
+### Auth Bypass
+| **Payload**   | **Description**   |
+| --------------|-------------------|
+| `test` | Basic Auth Bypass |
+| `test` | Basic Auth Bypass With comments |
+| [Auth Bypass Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass) | | 
+
+
 ### Union Injection
 | **Payload**   | **Description**   |
 | --------------|-------------------|
