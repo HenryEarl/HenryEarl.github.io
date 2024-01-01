@@ -86,8 +86,13 @@ title: MySQL
 ## MySQL Operator Precedence
 
 >  Division (`/`), Multiplication (`*`), and Modulus (`%`)
+
 > Addition (`+`) and Subtraction (`-`)
+
 > Comparison (`=`, `>`, `<`, `<=`, `>=`, `!=`, `LIKE`)
+
 > NOT (`!`)
+
 > AND (`&&`)
+
 > OR (`||`)
