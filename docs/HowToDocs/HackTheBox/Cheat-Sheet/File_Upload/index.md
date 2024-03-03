@@ -20,7 +20,7 @@ title: File Upload Attack
 | **Command**   | **Description**   |
 | --------------|-------------------|
 | **Client-Side Bypass** |
-[CTRL+SHIFT+C]	Toggle Page Inspector |
+| `[CTRL+SHIFT+C]` | Toggle Page Inspector |
 | **Blacklist Bypass** |
 | `shell.phtml` | Uncommon Extension |
 | `shell.pHp` | Case Manipulation |
@@ -40,6 +40,6 @@ title: File Upload Attack
 
 | **Potential Attack**   | **File Types**   |
 | --------------|-------------------|
-| XSS | HTML, JS, SVG, GIF | 
-| XXE/SSRF | XML, SVG, PDF, PPT, DOC | 
-| DoS | ZIP, JPG, PNG | 
+| `XSS` | HTML, JS, SVG, GIF | 
+| `XXE/SSRF` | XML, SVG, PDF, PPT, DOC | 
+| `DoS` | ZIP, JPG, PNG | 
