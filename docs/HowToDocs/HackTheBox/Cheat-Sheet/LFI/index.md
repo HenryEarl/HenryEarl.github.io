@@ -57,3 +57,6 @@ title: File Inclusion
 | [Webroot path wordlist for Windows](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/default-web-root-directory-windows.txt) ||
 | [Server configurations wordlist for Linux](https://raw.githubusercontent.com/DragonJAR/Security-Wordlist/main/LFI-WordList-Linux) ||
 | [Server configurations wordlist for Windows](https://raw.githubusercontent.com/DragonJAR/Security-Wordlist/main/LFI-WordList-Windows) ||
+
+# File Inclusion Functions
+<img src="/assets/images/File_Inclusion_Functions.png"/>
